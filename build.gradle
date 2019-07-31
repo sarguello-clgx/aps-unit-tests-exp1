@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+    id "org.jetbrains.kotlin.jvm" version "1.3.41"
+}
+
+group 'com.corelogic.spike'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+ext {
+    aps_version = "1.9.0"
+}
+configurations {
+    runtime.exclude group: "org.slf4j", module: "log4j-over-slf4j"
+}
+
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name "alfresco-artifacts-repository"
+        url "https://repo.corelogic.net/nexus/content/repositories/alfresco-artifacts/"
+    }
+    maven {
+        name "corelogic"
+        url "https://repo.corelogic.net/nexus/content/groups/m2"
+    }
+}
+
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.8'
+    annotationProcessor 'org.projectlombok:lombok:1.18.8'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile 'com.h2database:h2:1.3.168'
+    testCompile("org.assertj:assertj-core:3.13.1")
+    compile "com.activiti:activiti-app-logic:${aps_version}"
+    compile "com.activiti:activiti-app-rest:${aps_version}"
+    compile 'org.activiti:activiti-engine:5.21.0'
+    compile 'org.slf4j:slf4j-log4j12:1.7.5'
+    compile 'com.corelogic.clp.starters:clp-encryption-service-starter:4.0.1'
+    compile 'com.corelogic.clp.starters:clp-document-service-starter:3.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

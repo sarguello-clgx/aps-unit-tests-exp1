@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20190729185819504" modeler:modelId="44064" modeler:modelVersion="240" modeler:modelLastUpdated="1564425856845">
+  <process id="ToggleCancelState" name="Toggle Cancel State" isExecutable="true">
+    <extensionElements>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="disableCancel" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requestid" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="employmentRefId" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="applicantRefId" modeler:variableType="string"/>
+    </extensionElements>
+    <startEvent id="disablecancelstart">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[startEvent1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <serviceTask id="updatedisablecancel" name="Update disableCancel Flag" activiti:async="true" activiti:delegateExpression="${activiti_restCallDelegate}">
+      <extensionElements>
+        <activiti:field name="baseEndpoint">
+          <activiti:string><![CDATA[1]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="baseEndpointName">
+          <activiti:string><![CDATA[MUS Services]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="restUrl">
+          <activiti:string><![CDATA[api/productrequest/${requestid}/applicant/${applicantRefId}/employment/${employmentRefId}/state?cancelDisabled=${disableCancel}]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="httpMethod">
+          <activiti:string><![CDATA[PUT]]></activiti:string>
+        </activiti:field>
+        <modeler:response-mapping modeler:processVariableName="resultjson" modeler:processVariableType="string" modeler:jsonPropertyName="."/>
+        <modeler:response-mapping modeler:processVariableName="resultStatus" modeler:processVariableType="string" modeler:jsonPropertyName="status"/>
+        <modeler:editor-resource-id><![CDATA[sid-0834543B-17F2-4C0C-8491-3DFB623DA0D3]]></modeler:editor-resource-id>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-9E3C3A5B-9DEF-45D8-9F45-6C5BBBB7E625" sourceRef="disablecancelstart" targetRef="updatedisablecancel">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-9E3C3A5B-9DEF-45D8-9F45-6C5BBBB7E625]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="disablecancelend">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-3024BFE7-DC3C-42AC-80BE-AC4116D76E43]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <scriptTask id="evaluateresponse" name="Evaluate Response" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-245325F9-71D3-4BCE-B136-489A18C9690A]]></modeler:editor-resource-id>
+      </extensionElements>
+      <script><![CDATA[print(execution.getVariable("resultjson"));]]></script>
+    </scriptTask>
+    <sequenceFlow id="sid-CD83C93C-80A2-4BE3-B277-C5753625D7CE" sourceRef="updatedisablecancel" targetRef="evaluateresponse">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-CD83C93C-80A2-4BE3-B277-C5753625D7CE]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-619305B1-6F25-4A3E-B009-5C32191639FB" sourceRef="evaluateresponse" targetRef="disablecancelend">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-619305B1-6F25-4A3E-B009-5C32191639FB]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_ToggleCancelState">
+    <bpmndi:BPMNPlane bpmnElement="ToggleCancelState" id="BPMNPlane_ToggleCancelState">
+      <bpmndi:BPMNShape bpmnElement="disablecancelstart" id="BPMNShape_disablecancelstart">
+        <omgdc:Bounds height="30.0" width="30.0" x="100.0" y="314.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="updatedisablecancel" id="BPMNShape_updatedisablecancel">
+        <omgdc:Bounds height="80.0" width="100.0" x="195.0" y="289.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="disablecancelend" id="BPMNShape_disablecancelend">
+        <omgdc:Bounds height="28.0" width="28.0" x="615.0" y="315.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="evaluateresponse" id="BPMNShape_evaluateresponse">
+        <omgdc:Bounds height="80.0" width="100.0" x="360.0" y="289.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-CD83C93C-80A2-4BE3-B277-C5753625D7CE" id="BPMNEdge_sid-CD83C93C-80A2-4BE3-B277-C5753625D7CE">
+        <omgdi:waypoint x="295.0" y="329.0"/>
+        <omgdi:waypoint x="360.0" y="329.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-9E3C3A5B-9DEF-45D8-9F45-6C5BBBB7E625" id="BPMNEdge_sid-9E3C3A5B-9DEF-45D8-9F45-6C5BBBB7E625">
+        <omgdi:waypoint x="130.0" y="329.0"/>
+        <omgdi:waypoint x="195.0" y="329.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-619305B1-6F25-4A3E-B009-5C32191639FB" id="BPMNEdge_sid-619305B1-6F25-4A3E-B009-5C32191639FB">
+        <omgdi:waypoint x="460.0" y="329.0"/>
+        <omgdi:waypoint x="615.0" y="329.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

@@ -1,0 +1,213 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20190729185820329" modeler:modelId="44059" modeler:modelVersion="240" modeler:modelLastUpdated="1564425857331">
+  <process id="ResolveUnmatchedTWNEmployers" name="Resolve Unmatched TWN Employers" isExecutable="true">
+    <documentation>Match requested employments to TWN employers that were not automatically  matched.</documentation>
+    <extensionElements>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="employerName" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="phoneNumber" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="address1" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="address2" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="city" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="state" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="applicantRefId" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="twnEmploymentId" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="employmentRefId" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="unmatchedTWNEmployment" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requestid" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="loannumber" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="customerName" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requesterEmail" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requester" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="applicantsNeedManualMatch" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="needsManualMatch" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="countryName" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="dateCreated" modeler:variableType="string"/>
+    </extensionElements>
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[startEvent1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <sequenceFlow id="sid-3F3BE9F4-3F9C-41A6-9148-A4B4637225DE" sourceRef="startEvent1" targetRef="setEmploymentValues">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-3F3BE9F4-3F9C-41A6-9148-A4B4637225DE]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="sid-1976F97A-766F-4F59-8730-E16385145B23">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1976F97A-766F-4F59-8730-E16385145B23]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <userTask id="matchEmployerToTwn" name="Match Employer to TWN" activiti:candidateGroups="1002,1003" activiti:dueDate="${taskDueDateBean.calculateDueDate(0,0,0,0,30,0)}" activiti:formKey="44044">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[44044]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Match TWN Employments]]></modeler:form-reference-name>
+        <modeler:duedate-type><![CDATA[fixed]]></modeler:duedate-type>
+        <modeler:duedate-years><![CDATA[0]]></modeler:duedate-years>
+        <modeler:duedate-months><![CDATA[0]]></modeler:duedate-months>
+        <modeler:duedate-days><![CDATA[0]]></modeler:duedate-days>
+        <modeler:duedate-hours><![CDATA[0]]></modeler:duedate-hours>
+        <modeler:duedate-minutes><![CDATA[30]]></modeler:duedate-minutes>
+        <modeler:duedate-seconds><![CDATA[0]]></modeler:duedate-seconds>
+        <modeler:group-info-name-1002><![CDATA[VOE Processor]]></modeler:group-info-name-1002>
+        <modeler:group-info-name-1003><![CDATA[VOE Supervisor]]></modeler:group-info-name-1003>
+        <modeler:activiti-idm-candidate-group><![CDATA[true]]></modeler:activiti-idm-candidate-group>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-B43ECA0B-F3AB-4F4C-ADC8-A5513E30BE8B]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <scriptTask id="setEmploymentValues" name="Set Employment Values" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-24AD82F2-AB6D-4336-BA9E-BB4A74111EF9]]></modeler:editor-resource-id>
+      </extensionElements>
+      <script><![CDATA[print("Unmatched Employment....");
+print(execution.getVariable("unmatchedTWNEmployment"));
+
+var emp = JSON.parse(unmatchedTWNEmployment);
+execution.setVariable("applicantRefId",emp.applicantRefId);
+execution.setVariable("employmentRefId",emp.employmentRefId);
+execution.setVariable("employerName",emp.employerName);
+execution.setVariable("phoneNumber",emp.phone);
+execution.setVariable("address1",emp.address1);
+execution.setVariable("address2",emp.address2);
+execution.setVariable("city",emp.city);
+execution.setVariable("state",emp.state);
+execution.setVariable("countryName",emp.countryName);
+
+var applicantsNeedManualMatch = execution.getVariable("applicantsNeedManualMatch");
+print("Applicant Need Manual Match...");
+print(applicantsNeedManualMatch);
+var applicantIds = applicantsNeedManualMatch.split(',');
+execution.setVariable("needsManualMatch", (applicantIds.indexOf(emp.applicantRefId) > -1));
+print(applicantIds.indexOf(emp.applicantRefId) > -1);]]></script>
+    </scriptTask>
+    <sequenceFlow id="sid-1687BFE6-DF22-481E-AB8B-DEEAE4A7FBA2" sourceRef="matchEmployerToTwn" targetRef="foundMatch">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1687BFE6-DF22-481E-AB8B-DEEAE4A7FBA2]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <exclusiveGateway id="foundMatch" name="Found Match?" default="sid-D24DD78B-E5AB-4F31-BE05-24BA3C3B0A11">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-05455AAE-B851-4B48-8EA3-B5DFD5D8B0E4]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <serviceTask id="saveEmployerPairing" name="Save Employer Pairing" activiti:async="true" activiti:delegateExpression="${activiti_restCallDelegate}">
+      <extensionElements>
+        <activiti:field name="baseEndpoint">
+          <activiti:string><![CDATA[1]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="baseEndpointName">
+          <activiti:string><![CDATA[MUS Services]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="restUrl">
+          <activiti:string><![CDATA[api/product-requests/${requestid}/applicant/${applicantRefId}/employment/${employmentRefId}/${twnEmploymentId}]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="httpMethod">
+          <activiti:string><![CDATA[PUT]]></activiti:string>
+        </activiti:field>
+        <modeler:editor-resource-id><![CDATA[sid-6FADCD3F-AF2B-4DDE-97D6-D764C82A883C]]></modeler:editor-resource-id>
+      </extensionElements>
+    </serviceTask>
+    <sequenceFlow id="sid-1A169875-049C-4A96-9A7E-50FDC4D3A057" sourceRef="saveEmployerPairing" targetRef="sid-1976F97A-766F-4F59-8730-E16385145B23">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-1A169875-049C-4A96-9A7E-50FDC4D3A057]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-D24DD78B-E5AB-4F31-BE05-24BA3C3B0A11" name="No" sourceRef="foundMatch" targetRef="sid-1976F97A-766F-4F59-8730-E16385145B23">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-D24DD78B-E5AB-4F31-BE05-24BA3C3B0A11]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-FEDC8694-082C-41CB-ABA5-620364E15F76" name="Yes" sourceRef="foundMatch" targetRef="saveEmployerPairing">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:outcomeFormId="44044" modeler:outcomeFormName="Match TWN Employments" modeler:rightOutcomeName="Save Match" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-FEDC8694-082C-41CB-ABA5-620364E15F76]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'form44044outcome') && form44044outcome == 'Save Match')}]]></conditionExpression>
+    </sequenceFlow>
+    <exclusiveGateway id="sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4" name="Manual Match?" default="sid-C157D8D1-E6B8-47FD-A03C-1330DE5F46BE">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-21003A88-2A8E-466B-AD14-26B889BDE71A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-BD338032-B642-430E-A29A-612750C4ECD4" sourceRef="setEmploymentValues" targetRef="sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-6E00D6A1-A79B-4DC4-8BC1-01C77EA9EB6B]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-C157D8D1-E6B8-47FD-A03C-1330DE5F46BE" name="No" sourceRef="sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4" targetRef="sid-1976F97A-766F-4F59-8730-E16385145B23">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-48C7B266-A5B0-42E3-AB8F-5E85CC0D7DD8]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-88D5E240-0D59-4BAA-8AF2-987569200FBA" name="Yes" sourceRef="sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4" targetRef="matchEmployerToTwn">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftRestResponseId="needsManualMatch" modeler:rightValue="true" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-88D5E240-0D59-4BAA-8AF2-987569200FBA]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'needsManualMatch') && needsManualMatch == true)}]]></conditionExpression>
+    </sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_ResolveUnmatchedTWNEmployers">
+    <bpmndi:BPMNPlane bpmnElement="ResolveUnmatchedTWNEmployers" id="BPMNPlane_ResolveUnmatchedTWNEmployers">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="30.0" y="145.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-1976F97A-766F-4F59-8730-E16385145B23" id="BPMNShape_sid-1976F97A-766F-4F59-8730-E16385145B23">
+        <omgdc:Bounds height="28.0" width="28.0" x="870.0" y="146.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="matchEmployerToTwn" id="BPMNShape_matchEmployerToTwn">
+        <omgdc:Bounds height="80.0" width="100.0" x="480.0" y="120.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="setEmploymentValues" id="BPMNShape_setEmploymentValues">
+        <omgdc:Bounds height="80.0" width="100.0" x="150.0" y="120.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="foundMatch" id="BPMNShape_foundMatch">
+        <omgdc:Bounds height="40.0" width="40.0" x="645.0" y="140.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="saveEmployerPairing" id="BPMNShape_saveEmployerPairing">
+        <omgdc:Bounds height="80.0" width="100.0" x="735.0" y="235.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4" id="BPMNShape_sid-B57549C4-7BAF-4C31-A77E-25DA8CAF55C4">
+        <omgdc:Bounds height="40.0" width="40.0" x="345.0" y="140.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-1687BFE6-DF22-481E-AB8B-DEEAE4A7FBA2" id="BPMNEdge_sid-1687BFE6-DF22-481E-AB8B-DEEAE4A7FBA2">
+        <omgdi:waypoint x="580.0" y="160.0"/>
+        <omgdi:waypoint x="645.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-C157D8D1-E6B8-47FD-A03C-1330DE5F46BE" id="BPMNEdge_sid-C157D8D1-E6B8-47FD-A03C-1330DE5F46BE">
+        <omgdi:waypoint x="365.0956937799043" y="140.0956937799043"/>
+        <omgdi:waypoint x="365.5" y="56.0"/>
+        <omgdi:waypoint x="884.0" y="56.0"/>
+        <omgdi:waypoint x="884.0" y="146.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-3F3BE9F4-3F9C-41A6-9148-A4B4637225DE" id="BPMNEdge_sid-3F3BE9F4-3F9C-41A6-9148-A4B4637225DE">
+        <omgdi:waypoint x="60.0" y="160.0"/>
+        <omgdi:waypoint x="150.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-FEDC8694-082C-41CB-ABA5-620364E15F76" id="BPMNEdge_sid-FEDC8694-082C-41CB-ABA5-620364E15F76">
+        <omgdi:waypoint x="665.08658008658" y="179.91341991341992"/>
+        <omgdi:waypoint x="665.5" y="275.0"/>
+        <omgdi:waypoint x="735.0" y="275.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-1A169875-049C-4A96-9A7E-50FDC4D3A057" id="BPMNEdge_sid-1A169875-049C-4A96-9A7E-50FDC4D3A057">
+        <omgdi:waypoint x="835.0" y="275.0"/>
+        <omgdi:waypoint x="884.0" y="275.0"/>
+        <omgdi:waypoint x="884.0" y="174.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-BD338032-B642-430E-A29A-612750C4ECD4" id="BPMNEdge_sid-BD338032-B642-430E-A29A-612750C4ECD4">
+        <omgdi:waypoint x="250.0" y="160.0"/>
+        <omgdi:waypoint x="345.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-D24DD78B-E5AB-4F31-BE05-24BA3C3B0A11" id="BPMNEdge_sid-D24DD78B-E5AB-4F31-BE05-24BA3C3B0A11">
+        <omgdi:waypoint x="685.0" y="160.0"/>
+        <omgdi:waypoint x="870.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-88D5E240-0D59-4BAA-8AF2-987569200FBA" id="BPMNEdge_sid-88D5E240-0D59-4BAA-8AF2-987569200FBA">
+        <omgdi:waypoint x="385.0" y="160.0"/>
+        <omgdi:waypoint x="480.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

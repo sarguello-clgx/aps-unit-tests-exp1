@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/processdef" xmlns:modeler="http://activiti.com/modeler" modeler:version="1.0en" modeler:exportDateTime="20190729185820280" modeler:modelId="44066" modeler:modelVersion="245" modeler:modelLastUpdated="1564425857001">
+  <process id="SubmitVerificationResults" name="Submit Verification Results" isExecutable="true">
+    <extensionElements>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requestid" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requestjson" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="requeststatus" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="hostname" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="resultjson" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="retrycount" modeler:variableType="integer"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="employmentRefId" modeler:variableType="string"/>
+      <modeler:executionvariables xmlns:modeler="http://activiti.com/modeler" modeler:variableName="employmentsubstatus" modeler:variableType="string"/>
+    </extensionElements>
+    <startEvent id="startEvent1">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[startEvent1]]></modeler:editor-resource-id>
+      </extensionElements>
+    </startEvent>
+    <exclusiveGateway id="sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151" name="Successful?" default="successful">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <userTask id="ErrorVerificationResult" name="Error - Verification Result" activiti:assignee="$INITIATOR" activiti:formKey="44045">
+      <extensionElements>
+        <activiti:executionListener event="start" class="org.activiti.engine.impl.bpmn.listener.ScriptExecutionListener">
+          <activiti:field name="language">
+            <activiti:string><![CDATA[javascript]]></activiti:string>
+          </activiti:field>
+          <activiti:field name="script">
+            <activiti:string><![CDATA[var count  = Number(execution.getVariable("retrycount")) + 1;
+execution.setVariable("retrycount", count);]]></activiti:string>
+          </activiti:field>
+        </activiti:executionListener>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[44045]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Error Retry Details]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-F15382AC-8F08-4A32-9A9D-4D96901F18AD]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <serviceTask id="SubmitVerificationResultRestCall" name="Submit Verification Result" activiti:async="true" activiti:delegateExpression="${activiti_restCallDelegate}">
+      <extensionElements>
+        <activiti:field name="baseEndpoint">
+          <activiti:string><![CDATA[1]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="baseEndpointName">
+          <activiti:string><![CDATA[MUS Services]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="restUrl">
+          <activiti:string><![CDATA[api/productrequest/${requestid}/applicant/${applicantRefId}/employment/${employmentRefId}/verificationdetails]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="httpMethod">
+          <activiti:string><![CDATA[PUT]]></activiti:string>
+        </activiti:field>
+        <activiti:field name="requestMappingJSONTemplate">
+          <activiti:expression><![CDATA[{
+	"address1": "${address1}",
+	"address2": "${address2}",
+	"city": "${emplCity}",
+	"companyStatus": "${companyStatus}",
+	"contactName": "${employercontactname}",
+	"cpaCompanyName": "${cpaCompanyName}",
+	"cpaFirstFiledDate": "${cpaFirstFiledDate}",
+	"cpaName": "${cpaName}",
+	"cpaPhoneNumber": "${cpaPhoneNumber}",
+	"cpaPhoneExt": "${cpaPhoneExtension}",
+	"cpaVerificationDate": "${cpafirstfiledate}",
+	"emailAddress": "${employeremail}",
+	"employmentIsCurrent": "${employmentIsCurrent}",
+	"employmentRefId": "${employmentRefId}",
+	"endDate":"${enddate}",
+	"faxAttentionTo": "${faxattentionto}",
+	"faxNumber": "${employerfaxnumber}",
+	"fileDates": "${filedates}",
+	"jobTitle": "${jobTitle}",
+	"phoneNumber": "${phoneNumberUsed}",
+	"phoneExt": "${phoneExtensionUsed}",
+	"postalCode": "${postalCode}",
+	"productRequestRefId": "${requestid}",
+	"registeredAgentName": "${registeredAgent}",
+	"registrationDate": "${registrationDate}",
+	"secretaryOfStateUrl": "${secretaryOfStateUrl}",
+	"selfEmpStateReg": "${state}",
+	"selfEmpThirdPartyFilingAgent": "${selfEmpThirdPartyAgent}",
+	"startDate": "${startdate}",
+	"state": "${usState}",
+	"thirdPartyFee": "${thirdpartyfee}",
+	"thirdPartyProviderName": "${thirdpartyname}",
+	"thirdPartyProviderUrl": "${thirdpartyurl}",
+	"thirdPartyReportId": "${thirdPartyReportId}",
+	"thirdPartyTransactionId":"${thirdpartytransactionid}",
+	"verificationMethod": "${verificationMethod}",
+	"verifiedBy": "${verifiedBy}",
+	"verifierTitle": "${verifiertitle}",
+	"verificationOutcome":"${verificationOutcome}",
+	"grossBasePay": "${grossbasepay}",
+	"payPeriod": "${payperiod}",
+	"averageHoursPerWeek": "${averagehoursperweek}",
+	"specifyPayPeriod": "${specifypayperiod}",
+	"basePayYearToDate": "${basepayyeartodate}",
+	"basePayPastYear": "${basepaypastyear}",
+	"basePayTwoYearsPast": "${basepay2yearspast}",
+	"overtimeYearToDate": "${overtimeyeartodate}",
+	"overtimePastYear": "${overtimepastyear}",
+	"overtimeTwoYearsPast": "${overtime2yearspast}",
+	"commissionsYearToDate": "${commissionsyeartodate}",
+	"commissionsPastYear": "${commissionspastyear}",
+	"commissionsTwoYearsPast": "${commissions2yearspast}",
+	"bonusYearToDate": "${bonusyeartodate}",
+	"bonusPastYear": "${bonuspastyear}",
+	"bonusTwoYearsPast": "${bonus2yearspast}",
+	"totalYearToDate": "${totalyeartodate}",
+	"totalPastYear": "${totalpastyear}",
+	"totalTwoYearsPast": "${total2yearspast}",
+	"nextPayIncreaseDate": "${dateofnextpayincrease}",
+	"lastPayIncreaseDate": "${dateoflastpayincrease}",
+	"nextPayIncreaseAmount": "${projectednextpayincrease}",
+	"lastPayIncreaseAmount": "${lastpayincrease}",
+	"willOvertimeContinue": "${willovertimecontinue}",
+	"willBonusContinue": "${willbonuscontinue}",
+	"remarks": "${remarks}",
+	"employeeStatus": "${employmentstatus}",
+	"employeeSubStatus": "${employmentsubstatus}",
+	"payGrade": "${payGrade}",
+    "basePay": "${basePay}",
+    "rations": "${rations}",
+    "flightOrHazard": "${flightOrHazard}",
+    "clothing": "${clothing}",
+    "quarters": "${quarters}",
+    "proPay": "${proPay}",
+    "overseasOrCombat": "${overseasOrCombat}",
+    "variableHousingAllowance": "${variableHousingAllowance}",
+    "mailAttentionTo": "${mailAttentionTo}",
+    "paidThroughDate": "${paidThroughDate}",
+    "additionalIncomes": ${additionalincomes},
+    "mailFee": "${mailFee}",
+    "postageTrackingId": "${postageTrackingId}",
+    "mailCheckNumber": "${mailCheckNumber}",
+    "mailCheckAmount": "${mailCheckAmount}",
+    "mailExplanation": "${mailExplanation}",
+    "postageAmount": "${postageAmount}",
+    "translatorName": "${translatorName}",
+    "translatorFee": "${translatorFee}",
+    "internationalRemarks": "${internationalRemarks}",
+    "employerVerifiedDate": "${verifieddate}"
+}]]></activiti:expression>
+        </activiti:field>
+        <modeler:response-mapping modeler:processVariableName="requestjson" modeler:processVariableType="string" modeler:jsonPropertyName="data"/>
+        <modeler:response-mapping modeler:processVariableName="requeststatus" modeler:processVariableType="string" modeler:jsonPropertyName="status"/>
+        <modeler:response-mapping modeler:processVariableName="resultjson" modeler:processVariableType="string" modeler:jsonPropertyName="."/>
+        <modeler:editor-resource-id><![CDATA[sid-6CDC5DA2-950E-45F4-BDD6-8F28B8B844D6]]></modeler:editor-resource-id>
+      </extensionElements>
+    </serviceTask>
+    <scriptTask id="sid-893B76B0-999E-49F9-88E5-D157EC0A6137" name="Evaluate Response" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-893B76B0-999E-49F9-88E5-D157EC0A6137]]></modeler:editor-resource-id>
+      </extensionElements>
+      <script><![CDATA[print("VERIFICATION DETAILS UPDATE RESPONSE:");
+print(execution.getVariable("resultjson"));]]></script>
+    </scriptTask>
+    <scriptTask id="InitRequest" name="Init Request" scriptFormat="javascript" activiti:autoStoreVariables="false">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0]]></modeler:editor-resource-id>
+      </extensionElements>
+      <script><![CDATA[execution.setVariable("retrycount",0);
+execution.setVariable("issuccessful",true);
+
+var eStatus = execution.getVariable("employmentstatus");
+var eSubStatus = '';
+if(eStatus == 'ACTIVE')
+{
+    eSubStatus = execution.getVariable("employmentactivesubstatus");
+}
+else if(eStatus == 'INACTIVE')
+{
+    eSubStatus = execution.getVariable("employmentinactivesubstatus");
+}
+if(eSubStatus == 'Other')
+{
+    eSubStatus = execution.getVariable("employmentsubstatusother");
+}
+execution.setVariable("employmentsubstatus", eSubStatus);
+
+//For logging
+var data = {};
+data.address1 = execution.getVariable("address1");
+data.address2 = execution.getVariable("address2");
+data.city = execution.getVariable("city");
+data.companyStatus = execution.getVariable("companyStatus");
+data.contactName = execution.getVariable("employercontactname");
+data.cpaCompanyName = execution.getVariable("cpaCompanyName");
+data.cpaFirstFiledDate = execution.getVariable("cpaFirstFiledDate");
+data.cpaFirstName = execution.getVariable("cpaFirstName");
+data.cpaLastName = execution.getVariable("cpaLastName");
+data.cpaName = execution.getVariable("cpaName");
+data.cpaPhonNumber = execution.getVariable("cpaPhoneNumber");
+data.cpaPhoneExtension = execution.getVariable("cpaPhoneExtension");
+data.cpaVerificationDate = execution.getVariable("cpafirstfiledate");
+data.emailAddress = execution.getVariable("employeremail");
+data.employmentIsCurrent = execution.getVariable("employmentIsCurrent");
+data.employmentRefId = execution.getVariable("employmentRefId");
+data.endDate = execution.getVariable("enddate");
+data.faxAttentionTo = execution.getVariable("faxattentionto");
+data.faxNumber = execution.getVariable("employerfaxnumber");
+data.fileDates = execution.getVariable("filedates");
+data.jobTitle = execution.getVariable("jobTitle");
+var selectedPhoneNumber = execution.getVariable("whichPhoneNumber");
+if(selectedPhoneNumber === "altPhoneNumber1")
+{
+    data.phoneNumber = execution.getVariable("altPhoneNumber1");
+    data.phoneExtension = execution.getVariable("altPhoneExtension1");
+}
+else if(selectedPhoneNumber === "altPhoneNumber2")
+{
+    data.phoneNumber = execution.getVariable("altPhoneNumber2");
+    data.phoneExtension = execution.getVariable("altPhoneExtension2");
+}
+else
+{
+    data.phoneNumber = execution.getVariable("phoneNumber");
+    data.phoneExtension = execution.getVariable("phoneExtension");
+}
+
+var additionalincomes = execution.getVariable("additionalincome");
+if (!!additionalincomes) {
+    var IncomingAdditionalIncome = Java.type("com.corelogic.IncomingAdditionalIncome");
+    var ArrayList = Java.type("java.util.ArrayList");
+    data.additionalIncomes = [];
+    var result = new ArrayList();
+    additionalincomes = JSON.parse(additionalincomes);
+    for(var j=0; j< additionalincomes.length; j++) {
+        data.additionalIncomes.push({
+            incomeType: additionalincomes[j].incometype,
+            yearToDate: additionalincomes[j].yeartodate,
+            pastYear: additionalincomes[j].pastyear,
+            twoYearsPast: additionalincomes[j].twoyearspast
+        });
+        result.add(new IncomingAdditionalIncome(additionalincomes[j].incometype, additionalincomes[j].yeartodate, additionalincomes[j].pastyear, additionalincomes[j].twoyearspast));
+    }
+    execution.setVariable("additionalincomes", result);
+}
+
+//data.phoneNumber = data.phoneNumber.replace("(", "").replace(")", "").replace("-", "");
+execution.setVariable("phoneNumberUsed", data.phoneNumber);
+execution.setVariable("phoneExtensionUsed", data.phoneExtension);
+
+data.postalCode = execution.getVariable("postalCode");
+data.productRequestRefId = execution.getVariable("requestid");
+data.registeredAgentName = execution.getVariable("registeredAgent");
+data.registrationDate = execution.getVariable("registrationDate");
+data.secretaryOfStateUrl = execution.getVariable("secretaryOfStateUrl");
+data.selfEmpStateReg = execution.getVariable("state");
+data.selfEmpThirdPartyFilingAgent = execution.getVariable("selfEmpThirdPartyAgent");
+data.startDate = execution.getVariable("startdate");
+data.state = execution.getVariable("state");
+data.thirdPartyFee = execution.getVariable("thirdpartyfee");
+data.thirdPartyProviderName = execution.getVariable("thirdpartyname");
+data.thirdPartyProviderUrl = execution.getVariable("thirdpartyurl");
+data.thirdPartyReportId = execution.getVariable("thirdPartyReportId");
+data.thirdPartyTransactionId = execution.getVariable("thirdpartytransactionid");
+data.verificationMethod = execution.getVariable("verificationMethod");
+data.verifiedBy = execution.getVariable("verifiedBy");
+data.verificationOutcome = execution.getVariable("verificationOutcome");
+data.grossBasePay = execution.getVariable("grossbasepayamt");
+data.payPeriod = execution.getVariable("payperiod");
+data.averageHoursPerWeek = execution.getVariable("averagehoursperweek");
+data.specifyPayPeriod = execution.getVariable("specifypayperiod");
+data.basePayYearToDate = execution.getVariable("basepayyeartodateamt");
+data.basePayPastYear = execution.getVariable("basepaypastyear");
+data.basePayTwoYearsPast = execution.getVariable("basepay2yearspast");
+data.overtimeYearToDate = execution.getVariable("overtimeyeartodateamt");
+data.overtimePastYear = execution.getVariable("overtimepastyear");
+data.overtimeTwoYearsPast = execution.getVariable("overtime2yearspast");
+data.commissionsYearToDate = execution.getVariable("commissionsyeartodateamt");
+data.commissionsPastYear = execution.getVariable("commissionspastyear");
+data.commissionsTwoYearsPast = execution.getVariable("commissions2yearspast");
+data.bonusYearToDate = execution.getVariable("bonusyeartodateamt");
+data.bonusPastYear = execution.getVariable("bonuspastyear");
+data.bonusTwoYearsPast = execution.getVariable("bonus2yearspast");
+data.totalYearToDate = execution.getVariable("totalyeartodateamt");
+data.totalPastYear = execution.getVariable("totalpastyear");
+data.totalTwoYearsPast = execution.getVariable("total2yearspast");
+data.nextPayIncreaseDate = execution.getVariable("dateofnextpayincrease");
+data.lastPayIncreaseDate = execution.getVariable("dateoflastpayincrease");
+data.nextPayIncreaseAmount = execution.getVariable("projectednextpayincrease");
+data.lastPayIncreaseAmount = execution.getVariable("lastpayincrease");
+data.willOvertimeContinue = execution.getVariable("willovertimecontinue");
+data.willBonusContinue = execution.getVariable("willbonuscontinue");
+data.remarks = execution.getVariable("remarks");
+data.employeeStatus = eStatus;
+data.employeeSubStatus = eSubStatus;
+data.mailFee = execution.getVariable("mailFee");
+data.postageTrackingId = execution.getVariable("postageTrackingId");
+data.mailCheckNumber = execution.getVariable("mailCheckNumber");
+data.mailCheckAmount = execution.getVariable("mailCheckAmount");
+data.mailExplanation = execution.getVariable("mailExplanation");
+data.postageAmount = execution.getVariable("postageAmount");
+data.employerVerifiedDate = execution.getVariable("verifieddate");
+
+print("VERIFICATION DETAILS:");
+print(JSON.stringify(data));
+print("CPA FFDATE: " + execution.getVariable("cpaFirstFiledDate"));
+]]></script>
+    </scriptTask>
+    <userTask id="ErrorVerificationResultResolve" name="Error - Verification Result - Please Resolve!" activiti:assignee="$INITIATOR" activiti:formKey="44045">
+      <extensionElements>
+        <modeler:allow-send-email><![CDATA[true]]></modeler:allow-send-email>
+        <modeler:form-reference-id><![CDATA[44045]]></modeler:form-reference-id>
+        <modeler:form-reference-name><![CDATA[Error Retry Details]]></modeler:form-reference-name>
+        <modeler:activiti-idm-initiator><![CDATA[true]]></modeler:activiti-idm-initiator>
+        <modeler:initiator-can-complete><![CDATA[false]]></modeler:initiator-can-complete>
+        <modeler:editor-resource-id><![CDATA[sid-BDD5A696-4F8B-4CDA-A708-820F2BAF13E9]]></modeler:editor-resource-id>
+      </extensionElements>
+    </userTask>
+    <exclusiveGateway id="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB" name="Exceed Retries?" default="retry">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB]]></modeler:editor-resource-id>
+      </extensionElements>
+    </exclusiveGateway>
+    <sequenceFlow id="sid-75FE32A5-A010-46EA-9BC6-F37AC0359780" sourceRef="ErrorVerificationResultResolve" targetRef="SubmitVerificationResultRestCall">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-75FE32A5-A010-46EA-9BC6-F37AC0359780]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <endEvent id="sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89]]></modeler:editor-resource-id>
+      </extensionElements>
+    </endEvent>
+    <sequenceFlow id="sid-8F2E9E7D-EFA8-4568-AB74-7A6BDF0379B0" sourceRef="ErrorVerificationResult" targetRef="SubmitVerificationResultRestCall">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-8F2E9E7D-EFA8-4568-AB74-7A6BDF0379B0]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-51960698-5A8A-4ECE-8452-E639F1113E00" sourceRef="sid-893B76B0-999E-49F9-88E5-D157EC0A6137" targetRef="sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-51960698-5A8A-4ECE-8452-E639F1113E00]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-8B5050A2-DFC1-45BD-B830-9E2201E2D053" sourceRef="SubmitVerificationResultRestCall" targetRef="sid-893B76B0-999E-49F9-88E5-D157EC0A6137">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-8B5050A2-DFC1-45BD-B830-9E2201E2D053]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-87E479C4-52A7-406A-8C43-03E52A2F9FB7" sourceRef="InitRequest" targetRef="SubmitVerificationResultRestCall">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-87E479C4-52A7-406A-8C43-03E52A2F9FB7]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="sid-8DD35970-9779-4113-BEB3-9EE0659B5A8A" sourceRef="startEvent1" targetRef="InitRequest">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-8DD35970-9779-4113-BEB3-9EE0659B5A8A]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="retry" name="No" sourceRef="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB" targetRef="ErrorVerificationResult">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-22B06C31-AFDB-43BC-9CFA-3C0819FB3BF9]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="exceedretries" name="Yes" sourceRef="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB" targetRef="ErrorVerificationResultResolve">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftRestResponseId="retrycount" modeler:rightValue="2" modeler:operator=">"/>
+        <modeler:editor-resource-id><![CDATA[sid-8A0D9445-9FD1-4704-A26D-706D09894002]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'retrycount') && retrycount > 2)}]]></conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="sid-29901940-4556-4CAD-8A23-6808962C25CA" sourceRef="sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9" targetRef="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-29901940-4556-4CAD-8A23-6808962C25CA]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="successful" name="Yes" sourceRef="sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151" targetRef="sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-F31EF6C8-5543-4E78-8002-A5545C189663]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <sequenceFlow id="notsuccessful" name="No" sourceRef="sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151" targetRef="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB">
+      <extensionElements>
+        <modeler:conditionDefinition modeler:index="0" modeler:leftRestResponseId="requeststatus" modeler:rightValue="fail" modeler:operator="=="/>
+        <modeler:editor-resource-id><![CDATA[sid-E6592794-99FD-49A5-BEDF-99E7DB7BFE99]]></modeler:editor-resource-id>
+      </extensionElements>
+      <conditionExpression xsi:type="tFormalExpression"><![CDATA[${(activiti_flowConditionsBean.exists(execution, 'requeststatus') && requeststatus == 'fail')}]]></conditionExpression>
+    </sequenceFlow>
+    <boundaryEvent id="sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9" attachedToRef="SubmitVerificationResultRestCall">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-BC7932E6-28F5-4C17-B4A1-61BFF57DB971]]></modeler:editor-resource-id>
+      </extensionElements>
+      <errorEventDefinition/>
+    </boundaryEvent>
+    <sequenceFlow id="sid-F630CAEE-FD84-44CE-A4D3-A933CB036D7F" sourceRef="sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B" targetRef="SubmitVerificationResultRestCall">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-F630CAEE-FD84-44CE-A4D3-A933CB036D7F]]></modeler:editor-resource-id>
+      </extensionElements>
+    </sequenceFlow>
+    <boundaryEvent id="sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B" attachedToRef="ErrorVerificationResult" cancelActivity="true">
+      <extensionElements>
+        <modeler:editor-resource-id><![CDATA[sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B]]></modeler:editor-resource-id>
+      </extensionElements>
+      <timerEventDefinition>
+        <timeDuration>PT1M</timeDuration>
+      </timerEventDefinition>
+    </boundaryEvent>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_SubmitVerificationResults">
+    <bpmndi:BPMNPlane bpmnElement="SubmitVerificationResults" id="BPMNPlane_SubmitVerificationResults">
+      <bpmndi:BPMNShape bpmnElement="startEvent1" id="BPMNShape_startEvent1">
+        <omgdc:Bounds height="30.0" width="30.0" x="60.0" y="60.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151" id="BPMNShape_sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151">
+        <omgdc:Bounds height="40.0" width="40.0" x="600.0" y="55.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ErrorVerificationResult" id="BPMNShape_ErrorVerificationResult">
+        <omgdc:Bounds height="80.0" width="100.0" x="450.0" y="140.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="SubmitVerificationResultRestCall" id="BPMNShape_SubmitVerificationResultRestCall">
+        <omgdc:Bounds height="80.0" width="100.0" x="300.0" y="35.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-893B76B0-999E-49F9-88E5-D157EC0A6137" id="BPMNShape_sid-893B76B0-999E-49F9-88E5-D157EC0A6137">
+        <omgdc:Bounds height="80.0" width="100.0" x="450.0" y="35.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="InitRequest" id="BPMNShape_InitRequest">
+        <omgdc:Bounds height="80.0" width="100.0" x="150.0" y="35.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="ErrorVerificationResultResolve" id="BPMNShape_ErrorVerificationResultResolve">
+        <omgdc:Bounds height="80.0" width="100.0" x="450.0" y="260.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB" id="BPMNShape_sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB">
+        <omgdc:Bounds height="40.0" width="40.0" x="600.0" y="160.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89" id="BPMNShape_sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89">
+        <omgdc:Bounds height="28.0" width="28.0" x="780.0" y="61.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9" id="BPMNShape_sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9">
+        <omgdc:Bounds height="29.999999999999986" width="30.0" x="349.2823483437809" y="100.10222040843702"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B" id="BPMNShape_sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B">
+        <omgdc:Bounds height="31.0" width="31.0" x="356.82847537483184" y="114.69468835449132"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sid-8F2E9E7D-EFA8-4568-AB74-7A6BDF0379B0" id="BPMNEdge_sid-8F2E9E7D-EFA8-4568-AB74-7A6BDF0379B0">
+        <omgdi:waypoint x="450.0" y="180.0"/>
+        <omgdi:waypoint x="350.0" y="180.0"/>
+        <omgdi:waypoint x="350.0" y="115.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-51960698-5A8A-4ECE-8452-E639F1113E00" id="BPMNEdge_sid-51960698-5A8A-4ECE-8452-E639F1113E00">
+        <omgdi:waypoint x="550.0" y="75.0"/>
+        <omgdi:waypoint x="600.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-8DD35970-9779-4113-BEB3-9EE0659B5A8A" id="BPMNEdge_sid-8DD35970-9779-4113-BEB3-9EE0659B5A8A">
+        <omgdi:waypoint x="90.0" y="75.0"/>
+        <omgdi:waypoint x="150.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-F630CAEE-FD84-44CE-A4D3-A933CB036D7F" id="BPMNEdge_sid-F630CAEE-FD84-44CE-A4D3-A933CB036D7F">
+        <omgdi:waypoint x="367.8814812594636" y="145.0430634621548"/>
+        <omgdi:waypoint x="350.0" y="204.74877350651934"/>
+        <omgdi:waypoint x="350.0" y="115.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="notsuccessful" id="BPMNEdge_notsuccessful">
+        <omgdi:waypoint x="620.0" y="95.0"/>
+        <omgdi:waypoint x="620.0" y="160.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-87E479C4-52A7-406A-8C43-03E52A2F9FB7" id="BPMNEdge_sid-87E479C4-52A7-406A-8C43-03E52A2F9FB7">
+        <omgdi:waypoint x="250.0" y="75.0"/>
+        <omgdi:waypoint x="300.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-8B5050A2-DFC1-45BD-B830-9E2201E2D053" id="BPMNEdge_sid-8B5050A2-DFC1-45BD-B830-9E2201E2D053">
+        <omgdi:waypoint x="400.0" y="75.0"/>
+        <omgdi:waypoint x="450.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-75FE32A5-A010-46EA-9BC6-F37AC0359780" id="BPMNEdge_sid-75FE32A5-A010-46EA-9BC6-F37AC0359780">
+        <omgdi:waypoint x="450.0" y="300.0"/>
+        <omgdi:waypoint x="350.0" y="300.0"/>
+        <omgdi:waypoint x="350.0" y="115.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="exceedretries" id="BPMNEdge_exceedretries">
+        <omgdi:waypoint x="620.0829875518672" y="199.91701244813277"/>
+        <omgdi:waypoint x="620.5" y="300.0"/>
+        <omgdi:waypoint x="550.0" y="300.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sid-29901940-4556-4CAD-8A23-6808962C25CA" id="BPMNEdge_sid-29901940-4556-4CAD-8A23-6808962C25CA">
+        <omgdi:waypoint x="379.25153667742603" y="116.0631577798936"/>
+        <omgdi:waypoint x="565.2000122070312" y="128.0"/>
+        <omgdi:waypoint x="609.7378288283707" y="170.2621711716294"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="retry" id="BPMNEdge_retry">
+        <omgdi:waypoint x="600.0" y="180.0"/>
+        <omgdi:waypoint x="550.0" y="180.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="successful" id="BPMNEdge_successful">
+        <omgdi:waypoint x="640.0" y="75.0"/>
+        <omgdi:waypoint x="780.0" y="75.0"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>

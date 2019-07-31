@@ -1,0 +1,1783 @@
+{
+  "resourceId": 44062,
+  "properties": {
+    "process_id": "ConfirmBorrowerAuthorization",
+    "name": "Confirm Borrower Authorization",
+    "documentation": "",
+    "process_author": "",
+    "process_version": "",
+    "process_namespace": "http://www.activiti.org/processdef",
+    "executionlisteners": "{\"executionListeners\":[{\"event\":\"start\",\"className\":\"com.corelogic.UpdateApplicantWithExecutionId\",\"fields\":[{\"name\":\"applicant\",\"expression\":\"${applicant}\"},{\"name\":\"requestid\",\"expression\":\"${requestid}\"},{\"name\":\"authenticatedUserId\",\"stringValue\":\"1\"}]}]}",
+    "eventlisteners": "{\"eventListeners\":[]}",
+    "signaldefinitions": "[]",
+    "messagedefinitions": "[{\"id\":\"applicantConsentReceived\",\"name\":\"applicantConsentReceived\"}]",
+    "executionvariables": "[{\"variableName\":\"consentConfirmation\",\"variableType\":\"string\"},{\"variableName\":\"applicantName\",\"variableType\":\"string\"},{\"variableName\":\"applicantRefId\",\"variableType\":\"string\"},{\"variableName\":\"voeDocumentId\",\"variableType\":\"string\"},{\"variableName\":\"hostname\",\"variableType\":\"string\"},{\"variableName\":\"requestid\",\"variableType\":\"string\"},{\"variableName\":\"loanNumber\",\"variableType\":\"string\"},{\"variableName\":\"apsHostName\",\"variableType\":\"string\"},{\"variableName\":\"containsReverification\",\"variableType\":\"string\"},{\"variableName\":\"customerName\",\"variableType\":\"string\"},{\"variableName\":\"requesterEmail\",\"variableType\":\"string\"},{\"variableName\":\"requester\",\"variableType\":\"string\"},{\"variableName\":\"dateCreated\",\"variableType\":\"string\"}]",
+    "metadata": ""
+  },
+  "stencil": {
+    "id": "BPMNDiagram"
+  },
+  "childShapes": [
+    {
+      "resourceId": "startEvent1",
+      "properties": {
+        "overrideid": "startEvent1",
+        "name": "",
+        "documentation": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "initiator": "",
+        "formkeydefinition": "",
+        "formreference": "",
+        "fieldstovariables": "",
+        "formproperties": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false
+      },
+      "stencil": {
+        "id": "StartNoneEvent"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-D8793E49-B6CC-44F6-B628-F308FF45ACAE"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 30,
+          "y": 197
+        },
+        "upperLeft": {
+          "x": 0,
+          "y": 167
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90",
+      "properties": {
+        "overrideid": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90",
+        "name": "Authorization OK?",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "sequencefloworder": "",
+        "executionlisteners": {
+          "executionListeners": []
+        }
+      },
+      "stencil": {
+        "id": "ExclusiveGateway"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-A0C9C4A9-EA34-4B12-8C40-E8D570FF4341"
+        },
+        {
+          "resourceId": "sid-FEEB53D2-5A5A-4ACE-8C06-7447DA1E1F5F"
+        },
+        {
+          "resourceId": "sid-C2B65786-B5AE-45B8-B164-6FB1210B12C2"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 586.9965097147517,
+          "y": 202.60000001192088
+        },
+        "upperLeft": {
+          "x": 546.9965097147517,
+          "y": 162.60000001192088
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-D8793E49-B6CC-44F6-B628-F308FF45ACAE",
+      "properties": {
+        "overrideid": "sid-D8793E49-B6CC-44F6-B628-F308FF45ACAE",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-626A16CE-E06C-492E-B71F-44B1F48226C1"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 74.15625,
+          "y": 242
+        },
+        "upperLeft": {
+          "x": 30.0625,
+          "y": 182
+        }
+      },
+      "dockers": [
+        {
+          "x": 15,
+          "y": 15
+        },
+        {
+          "x": 52.5,
+          "y": 182
+        },
+        {
+          "x": 52.5,
+          "y": 242
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-626A16CE-E06C-492E-B71F-44B1F48226C1"
+      }
+    },
+    {
+      "resourceId": "sid-44757FA6-2637-4170-88E5-C5B3A31C0992",
+      "properties": {
+        "overrideid": "ReviewConsent",
+        "name": "Review Consent",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false,
+        "usertasksendemail": true,
+        "usertaskassignment": {
+          "assignment": {
+            "type": "idm",
+            "idm": {
+              "candidateGroups": [
+                {
+                  "id": 1002,
+                  "name": "VOE Processor"
+                },
+                {
+                  "id": 1003,
+                  "name": "VOE Supervisor"
+                }
+              ],
+              "type": "groups"
+            },
+            "initiatorCanCompleteTask": false
+          }
+        },
+        "formkeydefinition": "",
+        "formreference": {
+          "id": 44048,
+          "name": "Validate Applicant Consent",
+          "referenceId": null
+        },
+        "fieldstovariables": "",
+        "duedatedefinition": {
+          "duedate": {
+            "fixed": {
+              "years": 0,
+              "months": 0,
+              "days": 0,
+              "hours": 4,
+              "minutes": 0,
+              "seconds": 0
+            }
+          }
+        },
+        "prioritydefinition": "",
+        "categorydefinition": "",
+        "formproperties": "",
+        "tasklisteners": {
+          "taskListeners": [
+            {
+              "event": "create",
+              "className": "org.activiti.engine.impl.bpmn.listener.ScriptTaskListener",
+              "fields": [
+                {
+                  "name": "language",
+                  "stringValue": "javascript"
+                },
+                {
+                  "name": "script",
+                  "stringValue": "var taskName = \"Review Consent for \" + task.getExecution().getVariable(\"applicantName\");task.name = taskName;\n\ntask.getExecution().setVariable(\"isConsentValid\",true);"
+                }
+              ]
+            }
+          ]
+        },
+        "emailtemplate": ""
+      },
+      "stencil": {
+        "id": "UserTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-B541A11F-CABB-4C78-AD85-07228B5384C2"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 475,
+          "y": 222.60000001192088
+        },
+        "upperLeft": {
+          "x": 375,
+          "y": 142.60000001192088
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F",
+      "properties": {
+        "overrideid": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F",
+        "name": "Done",
+        "documentation": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false
+      },
+      "stencil": {
+        "id": "EndNoneEvent"
+      },
+      "childShapes": [],
+      "outgoing": [],
+      "bounds": {
+        "lowerRight": {
+          "x": 1258,
+          "y": 355
+        },
+        "upperLeft": {
+          "x": 1230,
+          "y": 327
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-24E0C4C4-9395-4505-8CC2-5FF9D58C97E7",
+      "properties": {
+        "overrideid": "sid-24E0C4C4-9395-4505-8CC2-5FF9D58C97E7",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 1229.7109375,
+          "y": 341
+        },
+        "upperLeft": {
+          "x": 1105.46484375,
+          "y": 341
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 14,
+          "y": 14
+        }
+      ],
+      "target": {
+        "resourceId": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F"
+      }
+    },
+    {
+      "resourceId": "sid-0957C1D0-5C9D-4E57-8528-FB91C5719A40",
+      "properties": {
+        "overrideid": "ReviewUpdatedConsent",
+        "name": "Review Updated Consent",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false,
+        "usertasksendemail": true,
+        "usertaskassignment": {
+          "assignment": {
+            "type": "idm",
+            "idm": {
+              "type": "groups",
+              "candidateGroups": [
+                {
+                  "id": 2002,
+                  "name": "VOE Followup",
+                  "$$hashKey": "object:4551"
+                }
+              ]
+            },
+            "initiatorCanCompleteTask": false
+          }
+        },
+        "formkeydefinition": "",
+        "formreference": {
+          "id": 44048,
+          "name": "Validate Applicant Consent",
+          "referenceId": null
+        },
+        "fieldstovariables": "",
+        "duedatedefinition": "",
+        "prioritydefinition": "",
+        "categorydefinition": "",
+        "formproperties": "",
+        "tasklisteners": {
+          "taskListeners": [
+            {
+              "event": "create",
+              "className": "org.activiti.engine.impl.bpmn.listener.ScriptTaskListener",
+              "fields": [
+                {
+                  "name": "language",
+                  "stringValue": "javascript"
+                },
+                {
+                  "name": "script",
+                  "stringValue": "var exec = task.getExecution();\nvar taskName = \"Review Updated Consent for \" + exec.getVariable(\"applicantName\");task.name = taskName;\n\nexec.setVariable(\"isConsentValid\",false);"
+                }
+              ]
+            }
+          ]
+        },
+        "emailtemplate": ""
+      },
+      "stencil": {
+        "id": "UserTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-C7A6ABFC-4C6A-414B-B008-D9FA048D7A55"
+        },
+        {
+          "resourceId": "sid-41F55B8E-E48A-40B9-8A9F-6F21BEDBCFAE"
+        },
+        {
+          "resourceId": "sid-90A24672-C929-42F2-8A4A-9ABA09BF4AD2"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 485.8222722984447,
+          "y": 410.6000000119209
+        },
+        "upperLeft": {
+          "x": 385.8222722984447,
+          "y": 330.6000000119209
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-D3204249-E8D1-446E-B7D0-BDA2E0FE7AA7",
+      "properties": {
+        "overrideid": "receivedupdate",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-44757FA6-2637-4170-88E5-C5B3A31C0992"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 374.43375993071567,
+          "y": 193.39413384861388
+        },
+        "upperLeft": {
+          "x": 305.76155256928433,
+          "y": 187.1775400142205
+        }
+      },
+      "dockers": [
+        {
+          "x": 15,
+          "y": 15
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-44757FA6-2637-4170-88E5-C5B3A31C0992"
+      }
+    },
+    {
+      "resourceId": "sid-B541A11F-CABB-4C78-AD85-07228B5384C2",
+      "properties": {
+        "overrideid": "consentoutcome",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 547.1375982682612,
+          "y": 182.60000001192088
+        },
+        "upperLeft": {
+          "x": 475.92064794659245,
+          "y": 182.60000001192088
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 20,
+          "y": 20
+        }
+      ],
+      "target": {
+        "resourceId": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90"
+      }
+    },
+    {
+      "resourceId": "sid-1959803F-96E0-4C2D-B1AF-54278C2DC16C",
+      "properties": {
+        "scriptformat": "javascript",
+        "scripttext": "var app = JSON.parse(applicant);\r\n\r\n//Retain the applicant info for each employment verification\r\nvar appFirstName = app.firstName;\r\nvar appLastName = app.lastName;\r\nvar appSSN = app.ssn;\r\n\r\n//Generate the list of verifications\r\nvar emps = app.employments;\r\nvar empsCount = emps.length;\r\n\r\nvar ArrayList = Java.type(\"java.util.ArrayList\");\r\nvar empList = new ArrayList();\r\n\r\nfor (var i = 0; i < empsCount; i++ ){\r\n        var emp = app.employments[i];\r\n        emp.applicantFirstName = appFirstName;\r\n        emp.applicantLastName = appLastName;\r\n        emp.applicantRefId = app.applicantRefId\r\n        emp.SSN = appSSN\r\n        emp.SSNLastFour = app.ssnLastFour;\r\n        empList.add(JSON.stringify(emp));\r\n}\r\n\r\nexecution.setVariable(\"verifications\", empList);\r\n\r\nprint(\"EMPLOYMENTS.....\");\r\nprint(empList);\r\n",
+        "executionvariables": "",
+        "overrideid": "createReVerificationList",
+        "name": "Create List of ReVerifications",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "ScriptTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-A7A8EE00-35B2-4720-9B79-0C629305EB6C"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 929.1965097147515,
+          "y": 590
+        },
+        "upperLeft": {
+          "x": 829.1965097147515,
+          "y": 510
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-A7A8EE00-35B2-4720-9B79-0C629305EB6C",
+      "properties": {
+        "overrideid": "sid-A7A8EE00-35B2-4720-9B79-0C629305EB6C",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-A17B146D-3351-4BE5-9347-EFC6CE734415"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 1055,
+          "y": 550
+        },
+        "upperLeft": {
+          "x": 929.6412413574777,
+          "y": 381.1875
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 1055,
+          "y": 550
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-A17B146D-3351-4BE5-9347-EFC6CE734415"
+      }
+    },
+    {
+      "resourceId": "sid-A17B146D-3351-4BE5-9347-EFC6CE734415",
+      "properties": {
+        "overrideid": "verifysingle",
+        "name": "Verify Single Employments",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "callactivitycalledelement": "VerifySingleEmployment",
+        "callactivityinparameters": {
+          "inParameters": [
+            {
+              "source": "initiator",
+              "target": "initiator",
+              "sourceExpression": null
+            },
+            {
+              "source": "verification",
+              "target": "verification",
+              "sourceExpression": null
+            },
+            {
+              "source": "authenticatedUserId",
+              "target": "authenticatedUserId",
+              "sourceExpression": null
+            },
+            {
+              "source": "tenantId",
+              "target": "tenantId",
+              "sourceExpression": null
+            },
+            {
+              "source": "requestid",
+              "target": "requestid",
+              "sourceExpression": null
+            },
+            {
+              "source": "containsReverification",
+              "target": "containsReverification",
+              "sourceExpression": null
+            },
+            {
+              "source": "customerName",
+              "target": "customerName",
+              "sourceExpression": null
+            },
+            {
+              "source": "requesterEmail",
+              "target": "requesterEmail",
+              "sourceExpression": null
+            },
+            {
+              "source": "requester",
+              "target": "requester",
+              "sourceExpression": null
+            },
+            {
+              "source": "dateCreated",
+              "target": "dateCreated",
+              "sourceExpression": null
+            },
+            {
+              "source": "losClientName",
+              "target": "losClientName",
+              "sourceExpression": null
+            }
+          ]
+        },
+        "callactivityoutparameters": {
+          "outParameters": []
+        },
+        "multiinstance_type": "Parallel",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "verifications",
+        "multiinstance_variable": "verification",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "CallActivity"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-24E0C4C4-9395-4505-8CC2-5FF9D58C97E7"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 1105,
+          "y": 381
+        },
+        "upperLeft": {
+          "x": 1005,
+          "y": 301
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-0542B618-30CE-4687-8CBC-29D4E76FDC17",
+      "properties": {
+        "scriptformat": "javascript",
+        "scripttext": "//",
+        "executionvariables": "",
+        "overrideid": "sid-0542B618-30CE-4687-8CBC-29D4E76FDC17",
+        "name": "STUB - Update MUS",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "ScriptTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-746B00B7-39CE-4E1F-BFFB-FEAD8B70BAAD"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 929.1965097147518,
+          "y": 110
+        },
+        "upperLeft": {
+          "x": 829.1965097147518,
+          "y": 30
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-746B00B7-39CE-4E1F-BFFB-FEAD8B70BAAD",
+      "properties": {
+        "overrideid": "sid-746B00B7-39CE-4E1F-BFFB-FEAD8B70BAAD",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 1244,
+          "y": 326.2687500006054
+        },
+        "upperLeft": {
+          "x": 930.0719855496371,
+          "y": 70.08367597054388
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 1244,
+          "y": 70.60000001192088
+        },
+        {
+          "x": 14,
+          "y": 14
+        }
+      ],
+      "target": {
+        "resourceId": "sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F"
+      }
+    },
+    {
+      "resourceId": "sid-626A16CE-E06C-492E-B71F-44B1F48226C1",
+      "properties": {
+        "scriptformat": "javascript",
+        "scripttext": "print(\"APPLICANT.....\");\nprint(applicant);\nvar app = JSON.parse(applicant);\nvar appName = app.firstName + \" \" + app.lastName;\n\nexecution.setVariable(\"applicantName\",appName);\nexecution.setVariable(\"applicantRefId\",app.applicantRefId);\nexecution.setVariable(\"loanNumber\",app.loanNumber);\n\nprint(execution.getVariable(\"apsHostName\"));",
+        "executionvariables": "",
+        "overrideid": "sid-626A16CE-E06C-492E-B71F-44B1F48226C1",
+        "name": "Init Consent Process",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "ScriptTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-E96B144B-75E3-49ED-876E-F65DFDE78259"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 175,
+          "y": 282
+        },
+        "upperLeft": {
+          "x": 75,
+          "y": 202
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-A0C9C4A9-EA34-4B12-8C40-E8D570FF4341",
+      "properties": {
+        "overrideid": "noconsent",
+        "name": "No Consent",
+        "documentation": "",
+        "conditionsequenceflow": {
+          "expression": {
+            "index": "0",
+            "leftRestResponseId": "consentConfirmation",
+            "rightValue": "noConsent",
+            "operator": "==",
+            "type": "variables"
+          }
+        },
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-0542B618-30CE-4687-8CBC-29D4E76FDC17"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 828.8054959364907,
+          "y": 162.35000001192088
+        },
+        "upperLeft": {
+          "x": 566.9965097147517,
+          "y": 70.09684371834614
+        }
+      },
+      "dockers": [
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 566.9965097147517,
+          "y": 70.60000001192088
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-0542B618-30CE-4687-8CBC-29D4E76FDC17"
+      }
+    },
+    {
+      "resourceId": "sid-C7A6ABFC-4C6A-414B-B008-D9FA048D7A55",
+      "properties": {
+        "overrideid": "updateok",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": true
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 558.7383040599263,
+          "y": 330.1236464901697
+        },
+        "upperLeft": {
+          "x": 464.0640531846605,
+          "y": 194.43572853367212
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 20,
+          "y": 20
+        }
+      ],
+      "target": {
+        "resourceId": "sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90"
+      }
+    },
+    {
+      "resourceId": "sid-FEEB53D2-5A5A-4ACE-8C06-7447DA1E1F5F",
+      "properties": {
+        "overrideid": "coneentok",
+        "name": "Yes",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": true
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-99C34FB1-2753-4076-A26B-09105E9EB74A"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 686.8558847147517,
+          "y": 182.60000001192088
+        },
+        "upperLeft": {
+          "x": 586.5902597147517,
+          "y": 182.60000001192088
+        }
+      },
+      "dockers": [
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-99C34FB1-2753-4076-A26B-09105E9EB74A"
+      }
+    },
+    {
+      "resourceId": "sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355",
+      "properties": {
+        "overrideid": "sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355",
+        "name": "Submit Failed Consent",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": [
+            {
+              "event": "start",
+              "className": "org.activiti.engine.impl.bpmn.listener.ScriptExecutionListener",
+              "fields": [
+                {
+                  "name": "language",
+                  "stringValue": "javascript"
+                },
+                {
+                  "name": "script",
+                  "stringValue": "execution.setVariable(\"consentIsValid\",false);"
+                }
+              ]
+            }
+          ]
+        },
+        "subprocessreference": {
+          "id": "44052",
+          "name": "Send Consent Form Validatity Update"
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "SubProcessCollapsed"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-47F3E875-47D4-4572-B99A-2AD7E3B8DE24"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 483.3785848309486,
+          "y": 529.6000000119209
+        },
+        "upperLeft": {
+          "x": 383.3785848309486,
+          "y": 449.6000000119209
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-99C34FB1-2753-4076-A26B-09105E9EB74A",
+      "properties": {
+        "overrideid": "sid-99C34FB1-2753-4076-A26B-09105E9EB74A",
+        "name": "Submit Valid Consent",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": [
+            {
+              "event": "start",
+              "className": "org.activiti.engine.impl.bpmn.listener.ScriptExecutionListener",
+              "fields": [
+                {
+                  "name": "language",
+                  "stringValue": "javascript"
+                },
+                {
+                  "name": "script",
+                  "stringValue": "execution.setVariable(\"consentIsValid\",true);"
+                }
+              ]
+            }
+          ]
+        },
+        "subprocessreference": {
+          "id": "44052",
+          "name": "Send Consent Form Validatity Update"
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "SubProcessCollapsed"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-0086AA75-6EF5-496C-9446-37D8EFCBFCF1"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 786.9965097147517,
+          "y": 222.60000001192088
+        },
+        "upperLeft": {
+          "x": 686.9965097147517,
+          "y": 142.60000001192088
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-47F3E875-47D4-4572-B99A-2AD7E3B8DE24",
+      "properties": {
+        "overrideid": "sid-47F3E875-47D4-4572-B99A-2AD7E3B8DE24",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-3FAC3010-CAD0-42A0-A060-0282062498A4"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 536.213159142431,
+          "y": 489.6000000119209
+        },
+        "upperLeft": {
+          "x": 483.998646891303,
+          "y": 489.6000000119209
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 14,
+          "y": 14
+        }
+      ],
+      "target": {
+        "resourceId": "sid-3FAC3010-CAD0-42A0-A060-0282062498A4"
+      }
+    },
+    {
+      "resourceId": "sid-3FAC3010-CAD0-42A0-A060-0282062498A4",
+      "properties": {
+        "overrideid": "sid-3FAC3010-CAD0-42A0-A060-0282062498A4",
+        "name": "",
+        "documentation": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false
+      },
+      "stencil": {
+        "id": "EndNoneEvent"
+      },
+      "childShapes": [],
+      "outgoing": [],
+      "bounds": {
+        "lowerRight": {
+          "x": 564.9965097147516,
+          "y": 503.6000000119209
+        },
+        "upperLeft": {
+          "x": 536.9965097147516,
+          "y": 475.6000000119209
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-45355B65-F1E6-4A07-932A-6663EEC35887",
+      "properties": {
+        "overrideid": "sid-45355B65-F1E6-4A07-932A-6663EEC35887",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 402.1976731567131,
+          "y": 449.2483188544742
+        },
+        "upperLeft": {
+          "x": 286.6452198154301,
+          "y": 299.7101718335529
+        }
+      },
+      "dockers": [
+        {
+          "x": 15.5,
+          "y": 15.5
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355"
+      }
+    },
+    {
+      "resourceId": "sid-41F55B8E-E48A-40B9-8A9F-6F21BEDBCFAE",
+      "properties": {
+        "overrideid": "sid-B676DAD0-B622-4400-B818-80FC95B54125",
+        "name": "Received Update",
+        "documentation": "",
+        "messageref": "applicantConsentReceived",
+        "cancelactivity": true,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false
+      },
+      "stencil": {
+        "id": "BoundaryMessageEvent"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-D3204249-E8D1-446E-B7D0-BDA2E0FE7AA7"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 305,
+          "y": 209.82095809509514
+        },
+        "upperLeft": {
+          "x": 275,
+          "y": 179.82095809509514
+        }
+      },
+      "dockers": [
+        {
+          "x": -95.82227229844472,
+          "y": -135.77904191682575
+        }
+      ]
+    },
+    {
+      "resourceId": "sid-90A24672-C929-42F2-8A4A-9ABA09BF4AD2",
+      "properties": {
+        "overrideid": "sid-90A24672-C929-42F2-8A4A-9ABA09BF4AD2",
+        "name": "",
+        "documentation": "",
+        "timercycledefinition": "",
+        "timerdatedefinition": "",
+        "timerdurationdefinition": "PT2S",
+        "cancelactivity": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false
+      },
+      "stencil": {
+        "id": "BoundaryTimerEvent"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-45355B65-F1E6-4A07-932A-6663EEC35887"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 292.3629324853231,
+          "y": 302.5507684312729
+        },
+        "upperLeft": {
+          "x": 261.3629324853231,
+          "y": 271.5507684312729
+        }
+      },
+      "dockers": [
+        {
+          "x": -108.95933981312163,
+          "y": -43.549231580647984
+        }
+      ]
+    },
+    {
+      "resourceId": "sid-9CD0E612-1C19-417D-9E94-CB63224D0652",
+      "properties": {
+        "overrideid": "sid-9CD0E612-1C19-417D-9E94-CB63224D0652",
+        "name": "",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "sequencefloworder": "",
+        "executionlisteners": {
+          "executionListeners": []
+        }
+      },
+      "stencil": {
+        "id": "ExclusiveGateway"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-1E43C26F-3380-477F-BA76-B4DEE893514B"
+        },
+        {
+          "resourceId": "sid-A4D591FE-9584-4480-8FBB-D70336F58C2D"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 260,
+          "y": 202
+        },
+        "upperLeft": {
+          "x": 220,
+          "y": 162
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-E96B144B-75E3-49ED-876E-F65DFDE78259",
+      "properties": {
+        "overrideid": "sid-E96B144B-75E3-49ED-876E-F65DFDE78259",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-9CD0E612-1C19-417D-9E94-CB63224D0652"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 220.40625,
+          "y": 242
+        },
+        "upperLeft": {
+          "x": 175.84375,
+          "y": 182
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 197.5,
+          "y": 242
+        },
+        {
+          "x": 197.5,
+          "y": 182
+        },
+        {
+          "x": 20,
+          "y": 20
+        }
+      ],
+      "target": {
+        "resourceId": "sid-9CD0E612-1C19-417D-9E94-CB63224D0652"
+      }
+    },
+    {
+      "resourceId": "sid-1E43C26F-3380-477F-BA76-B4DEE893514B",
+      "properties": {
+        "overrideid": "sid-1E43C26F-3380-477F-BA76-B4DEE893514B",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": true
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-44757FA6-2637-4170-88E5-C5B3A31C0992"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 374.8593802592721,
+          "y": 182.43738178250382
+        },
+        "upperLeft": {
+          "x": 259.7890572407279,
+          "y": 182.0641807274613
+        }
+      },
+      "dockers": [
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-44757FA6-2637-4170-88E5-C5B3A31C0992"
+      }
+    },
+    {
+      "resourceId": "sid-A4D591FE-9584-4480-8FBB-D70336F58C2D",
+      "properties": {
+        "overrideid": "sid-A4D591FE-9584-4480-8FBB-D70336F58C2D",
+        "name": "Reverification",
+        "documentation": "",
+        "conditionsequenceflow": {
+          "expression": {
+            "index": "0",
+            "leftRestResponseId": "containsReverification",
+            "rightValue": "true",
+            "operator": "==",
+            "type": "variables"
+          }
+        },
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-1959803F-96E0-4C2D-B1AF-54278C2DC16C"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 828.2592823932866,
+          "y": 550
+        },
+        "upperLeft": {
+          "x": 240,
+          "y": 201.6875
+        }
+      },
+      "dockers": [
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 240,
+          "y": 550
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-1959803F-96E0-4C2D-B1AF-54278C2DC16C"
+      }
+    },
+    {
+      "resourceId": "sid-F84C1BCE-EB4A-4740-BA1B-8F094500AEC1",
+      "properties": {
+        "overrideid": "retrieveUpdatedProductRequest",
+        "name": "Retrieve Updated ProductRequest",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "subprocessreference": {
+          "id": "44051",
+          "name": "Get Request Details"
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "SubProcessCollapsed"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-3F84FA0B-2C77-4234-9B35-0CAC0462DCA3"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 929.1965097147515,
+          "y": 222.60000001192088
+        },
+        "upperLeft": {
+          "x": 829.1965097147515,
+          "y": 142.60000001192088
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-7BADDC1A-EF33-45D3-9AD9-CBB961597746",
+      "properties": {
+        "scriptformat": "javascript",
+        "scripttext": "var request = JSON.parse(requestjson);\n\nvar updatedApplicants = request.applicants;\n\nvar originalApplicant = JSON.parse(applicant);\n\nvar updatedApplicant;\nfor(var i = 0; i < updatedApplicants.length; i++) {\n    if(updatedApplicants[i].applicantRefId === originalApplicant.applicantRefId) {\n        updatedApplicant = updatedApplicants[i];\n        break;\n    }\n}\n\nvar ArrayList = Java.type(\"java.util.ArrayList\");\nvar empList = new ArrayList();\n\n//Get all the employments. We need to see if all are completed.\nfor (var j = 0; j < updatedApplicant.employments.length; j++){\n    var thisEmp = updatedApplicant.employments[j];\n    if (thisEmp.voeState !== 'COMPLETED' && thisEmp.voeState !== 'CANCELLED') {\n        thisEmp.requestId = request.productRequestRefId\n        thisEmp.loanNumber = request.loanNumber\n        thisEmp.applicantFirstName = updatedApplicant.firstName;\n        thisEmp.applicantLastName = updatedApplicant.lastName;\n        thisEmp.applicantRefId = updatedApplicant.applicantRefId;\n        thisEmp.SSN = updatedApplicant.ssn;\n        thisEmp.SSNLastFour = updatedApplicant.ssnLastFour;\n        empList.add(JSON.stringify(thisEmp));\n    }\n}\n\nexecution.setVariable(\"verifications\", empList);\n\n",
+        "executionvariables": "",
+        "overrideid": "createVerificationList",
+        "name": "Create Verification List",
+        "documentation": "",
+        "asynchronousdefinition": false,
+        "exclusivedefinition": false,
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "multiinstance_type": "None",
+        "multiinstance_cardinality": "",
+        "multiinstance_collection": "",
+        "multiinstance_variable": "",
+        "multiinstance_condition": "",
+        "isforcompensation": false
+      },
+      "stencil": {
+        "id": "ScriptTask"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-7951271D-9FF7-4E79-AA5D-E5B510B02EAD"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 929.1965097147513,
+          "y": 381
+        },
+        "upperLeft": {
+          "x": 829.1965097147513,
+          "y": 301
+        }
+      },
+      "dockers": []
+    },
+    {
+      "resourceId": "sid-0086AA75-6EF5-496C-9446-37D8EFCBFCF1",
+      "properties": {
+        "overrideid": "sid-0086AA75-6EF5-496C-9446-37D8EFCBFCF1",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-F84C1BCE-EB4A-4740-BA1B-8F094500AEC1"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 828.2043222147516,
+          "y": 182.60000001192088
+        },
+        "upperLeft": {
+          "x": 787.9886972147516,
+          "y": 182.60000001192088
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-F84C1BCE-EB4A-4740-BA1B-8F094500AEC1"
+      }
+    },
+    {
+      "resourceId": "sid-3F84FA0B-2C77-4234-9B35-0CAC0462DCA3",
+      "properties": {
+        "overrideid": "sid-3F84FA0B-2C77-4234-9B35-0CAC0462DCA3",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-7BADDC1A-EF33-45D3-9AD9-CBB961597746"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 879.1965097147515,
+          "y": 300.4000000029802
+        },
+        "upperLeft": {
+          "x": 879.1965097147513,
+          "y": 223.20000000894066
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-7BADDC1A-EF33-45D3-9AD9-CBB961597746"
+      }
+    },
+    {
+      "resourceId": "sid-7951271D-9FF7-4E79-AA5D-E5B510B02EAD",
+      "properties": {
+        "overrideid": "sid-7951271D-9FF7-4E79-AA5D-E5B510B02EAD",
+        "name": "",
+        "documentation": "",
+        "conditionsequenceflow": "",
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-A17B146D-3351-4BE5-9347-EFC6CE734415"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 1004.5552683572738,
+          "y": 341
+        },
+        "upperLeft": {
+          "x": 929.6412413574775,
+          "y": 341
+        }
+      },
+      "dockers": [
+        {
+          "x": 50,
+          "y": 40
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-A17B146D-3351-4BE5-9347-EFC6CE734415"
+      }
+    },
+    {
+      "resourceId": "sid-C2B65786-B5AE-45B8-B164-6FB1210B12C2",
+      "properties": {
+        "overrideid": "consentinvalid",
+        "name": "Invalid",
+        "documentation": "",
+        "conditionsequenceflow": {
+          "expression": {
+            "index": "0",
+            "operator": "==",
+            "type": "advanced",
+            "leftFormFieldId": "result",
+            "rightValue": "Invalid"
+          }
+        },
+        "executionlisteners": {
+          "executionListeners": []
+        },
+        "defaultflow": "false"
+      },
+      "stencil": {
+        "id": "SequenceFlow"
+      },
+      "childShapes": [],
+      "outgoing": [
+        {
+          "resourceId": "sid-0957C1D0-5C9D-4E57-8528-FB91C5719A40"
+        }
+      ],
+      "bounds": {
+        "lowerRight": {
+          "x": 566.9965097147517,
+          "y": 370.6000000119209
+        },
+        "upperLeft": {
+          "x": 486.01261132955983,
+          "y": 202.69375001192088
+        }
+      },
+      "dockers": [
+        {
+          "x": 20,
+          "y": 20
+        },
+        {
+          "x": 566.9965097147517,
+          "y": 370.6000000119209
+        },
+        {
+          "x": 50,
+          "y": 40
+        }
+      ],
+      "target": {
+        "resourceId": "sid-0957C1D0-5C9D-4E57-8528-FB91C5719A40"
+      }
+    }
+  ],
+  "bounds": {
+    "lowerRight": {
+      "x": 1358,
+      "y": 1050
+    },
+    "upperLeft": {
+      "x": 0,
+      "y": 0
+    }
+  },
+  "stencilset": {
+    "url": "stencilsets/bpmn2.0/bpmn2.0.json",
+    "namespace": "http://b3mn.org/stencilset/bpmn2.0#"
+  },
+  "ssextensions": []
+}

@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.corelogic.spike.FirstTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2019-07-31T00:15:02" hostname="IRVWOXW204DJ1GQ" time="4.549">
+  <properties/>
+  <testcase name="test" classname="com.corelogic.spike.FirstTest" time="4.549">
+    <failure message="org.activiti.engine.ActivitiException: Error while evaluating expression: ${taskDueDateBean.calculateDueDate(0,0,0,4,0,0)}" type="org.activiti.engine.ActivitiException">org.activiti.engine.ActivitiException: Error while evaluating expression: ${taskDueDateBean.calculateDueDate(0,0,0,4,0,0)}
+	at org.activiti.engine.impl.el.JuelExpression.getValue(JuelExpression.java:57)
+	at org.activiti.engine.impl.bpmn.behavior.UserTaskActivityBehavior.execute(UserTaskActivityBehavior.java:145)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior.leave(ExclusiveGatewayActivityBehavior.java:89)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.AbstractBpmnActivityBehavior.leave(AbstractBpmnActivityBehavior.java:47)
+	at org.activiti.engine.impl.bpmn.behavior.ScriptTaskActivityBehavior.execute(ScriptTaskActivityBehavior.java:97)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStartInitial.eventNotificationsCompleted(AtomicOperationProcessStartInitial.java:45)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStart.eventNotificationsCompleted(AtomicOperationProcessStart.java:64)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:382)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:110)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:82)
+	at com.corelogic.spike.FirstTest.test(FirstTest.kt:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.activiti.engine.test.ActivitiRule$1.evaluate(ActivitiRule.java:126)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.activiti.engine.impl.javax.el.ELException: java.lang.NullPointerException
+	at org.activiti.engine.impl.javax.el.BeanELResolver.invoke(BeanELResolver.java:487)
+	at org.activiti.engine.impl.javax.el.CompositeELResolver.invoke(CompositeELResolver.java:397)
+	at org.activiti.engine.impl.juel.AstMethod.invoke(AstMethod.java:102)
+	at org.activiti.engine.impl.juel.AstMethod.eval(AstMethod.java:86)
+	at org.activiti.engine.impl.juel.AstEval.eval(AstEval.java:50)
+	at org.activiti.engine.impl.juel.AstNode.getValue(AstNode.java:26)
+	at org.activiti.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
+	at org.activiti.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:33)
+	at org.activiti.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:37)
+	at org.activiti.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:25)
+	at org.activiti.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
+	... 197 more
+Caused by: java.lang.NullPointerException
+	at com.activiti.runtime.activiti.bean.UserTaskDueDateBean.calculateDueDate(UserTaskDueDateBean.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.activiti.engine.impl.javax.el.BeanELResolver.invoke(BeanELResolver.java:483)
+	... 207 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[05:15:02,289 [Test worker] DEBUG org.activiti.engine.impl.test.TestHelper  - ==== BUILDING PROCESS ENGINE ========================================================================
+05:15:02,357 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment  - Adding PropertySource 'systemProperties' with lowest search precedence
+05:15:02,359 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment  - Adding PropertySource 'systemEnvironment' with lowest search precedence
+05:15:02,360 [Test worker] DEBUG org.springframework.core.env.StandardEnvironment  - Initialized StandardEnvironment with PropertySources [MapPropertySource@940402465 {name='systemProperties', properties={java.runtime.name=OpenJDK Runtime Environment, sun.boot.library.path=/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib, java.vm.version=25.212-b03, gopherProxySet=false, java.vm.vendor=AdoptOpenJDK, java.vendor.url=http://java.oracle.com/, path.separator=:, java.vm.name=OpenJDK 64-Bit Server VM, file.encoding.pkg=sun.io, sun.java.launcher=SUN_STANDARD, user.country=US, sun.os.patch.level=unknown, java.vm.specification.name=Java Virtual Machine Specification, user.dir=/Users/Labs/workspace/activitiTests, java.runtime.version=1.8.0_212-b03, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, java.endorsed.dirs=/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/endorsed, os.arch=x86_64, java.io.tmpdir=/var/folders/06/jw15yh494915l9jbdb5zm8g40000gp/T/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, user.variant=, os.name=Mac OS X, sun.jnu.encoding=UTF-8, java.library.path=/Users/Labs/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.specification.name=Java Platform API Specification, java.class.version=52.0, org.gradle.native=false, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, os.version=10.13.6, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, user.home=/Users/Labs, user.timezone=US/Pacific, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, file.encoding=UTF-8, java.specification.version=1.8, java.class.path=/Users/Labs/workspace/activitiTests/build/classes/java/test:/Users/Labs/workspace/activitiTests/build/classes/kotlin/test:/Users/Labs/workspace/activitiTests/build/resources/test:/Users/Labs/workspace/activitiTests/build/classes/java/main:/Users/Labs/workspace/activitiTests/build/classes/kotlin/main:/Users/Labs/workspace/activitiTests/build/resources/main:/Users/Labs/.m2/repository/com/activiti/activiti-app-rest/1.9.0/activiti-app-rest-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-app-logic/1.9.0/activiti-app-logic-1.9.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.activiti/activiti-engine/5.21.0/c7cd9e71d8f895b0fb5de166a1d839f31de30042/activiti-engine-5.21.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.5/6edffc576ce104ec769d954618764f39f0f0f10d/slf4j-log4j12-1.7.5.jar:/Users/Labs/.m2/repository/com/corelogic/clp/starters/clp-encryption-service-starter/4.0.1/clp-encryption-service-starter-4.0.1.jar:/Users/Labs/.m2/repository/com/corelogic/clp/starters/clp-document-service-starter/3.2.0/clp-document-service-starter-3.2.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.3.41/77652607ed82a49202d8a0b89de16994b61bdd75/kotlin-stdlib-jdk8-1.3.41.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/junit/junit/4.12/2973d150c0dc1fefe998f834810d68f278ea58ec/junit-4.12.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.h2database/h2/1.3.168/eb32936a239d95220f5b2d2973a7b17372f98b54/h2-1.3.168.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.13.1/518274b2ff4f5f4bada91e3e88dca0b12278d994/assertj-core-3.13.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.keycloak/keycloak-core/3.4.3.Final/442bf810709c9a122f73828f0af25a390044cc6e/keycloak-core-3.4.3.Final.jar:/Users/Labs/.m2/repository/com/activiti/activiti-app-alfresco-cloud/1.9.0/activiti-app-alfresco-cloud-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-app-box-cloud/1.9.0/activiti-app-box-cloud-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/content-storage-fs/1.9.0/content-storage-fs-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/content-storage-s3/1.9.0/content-storage-s3-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/content-storage-api/1.9.0/content-storage-api-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-cipher/1.9.0/activiti-cipher-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/editor-bpmn-json-converter/1.9.0/editor-bpmn-json-converter-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-app-model/1.9.0/activiti-app-model-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/ldap-connector/1.9.0/ldap-connector-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-app-data/1.9.0/activiti-app-data-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-dmn-engine/1.9.0/activiti-dmn-engine-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/editor-dmn-json-converter/1.9.0/editor-dmn-json-converter-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-dmn-xml-converter/1.9.0/activiti-dmn-xml-converter-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-dmn-model/1.9.0/activiti-dmn-model-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-spring/5.22.0.7/activiti-spring-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/activiti-engine/5.22.0.7/activiti-engine-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/activiti-bpmn-converter/5.22.0.7/activiti-bpmn-converter-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/activiti-bpmn-layout/5.22.0.7/activiti-bpmn-layout-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/activiti-process-validation/5.22.0.7/activiti-process-validation-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/editor-image-generator/1.9.0/editor-image-generator-1.9.0.jar:/Users/Labs/.m2/repository/com/activiti/activiti-image-generator/5.22.0.7/activiti-image-generator-5.22.0.7.jar:/Users/Labs/.m2/repository/com/activiti/activiti-bpmn-model/5.22.0.7/activiti-bpmn-model-5.22.0.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.ryantenney.metrics/metrics-spring/3.1.3/9fb02eb930dbe1778b015924770ac853cd7b832e/metrics-spring-3.1.3.jar:/Users/Labs/.m2/repository/com/activiti/aspose-transformation/1.9.0/aspose-transformation-1.9.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger2/2.6.0/e18cb1d9e81ff56ca6c079896c85a3fba3647de5/springfox-swagger2-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.activiti/activiti-bpmn-converter/5.21.0/c86389d70f5e89a1aaa54437f323c81e65d97425/activiti-bpmn-converter-5.21.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.activiti/activiti-image-generator/5.21.0/e1cbd3f416751bac08b6ea935bc78cd7f1a976b7/activiti-image-generator-5.21.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.chemistry.opencmis/chemistry-opencmis-client-impl/0.10.0/38e16c17cc86704af20f6899fa11528fa5f275e3/chemistry-opencmis-client-impl-0.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-freemarker/1.5.10.RELEASE/5f875a5973411ebd2f51205d397037b15f5d10df/spring-boot-starter-freemarker-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter-sleuth/1.1.4.RELEASE/8b3b5de7e2cfa2b7d2f09e85fd314bab41d4f41f/spring-cloud-starter-sleuth-1.1.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-actuator/1.5.9.RELEASE/5fcdcdef573e55e5dba9b499e3f5582f6b3c3fbe/spring-boot-starter-actuator-1.5.9.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-web/1.5.10.RELEASE/8bc445f3ee81e5322e46b28cbb33bca1800b69d9/spring-boot-starter-web-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-starter/1.1.9.RELEASE/b11668cfa912c45395fb04294c7304c00cce08d5/spring-cloud-starter-1.1.9.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-aop/1.4.6.RELEASE/c1902695309ea4b08559299beaabfa054c9ed1a6/spring-boot-starter-aop-1.4.6.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter/1.5.10.RELEASE/d935ac98f84c1d97d7ccd702d21abdc236fa7aa0/spring-boot-starter-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-logging/1.5.10.RELEASE/62c73688208b3173645d6701fc3eb95ca657e6c8/spring-boot-starter-logging-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.11/ccedfbacef4a6515d2983e3f89ed753d5d4fb665/logback-classic-1.1.11.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-jpa/1.11.10.RELEASE/82ec646adc5d33b7b1d8f52e90c0ea030f0888ca/spring-data-jpa-1.11.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-commons/1.13.10.RELEASE/b732245a0902b561b0c33e54cd0f382e9ac444ed/spring-data-commons-1.13.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.slf4j/jcl-over-slf4j/1.7.25/f8c32b13ff142a513eeb5b6330b1588dcb2c0461/jcl-over-slf4j-1.7.25.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-core/3.1.2/224f03afd2521c6c94632f566beb1bb5ee32cf07/metrics-core-3.1.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-healthchecks/3.1.2/e32a01aa7ca4070676e22e707272422baa0f7ecd/metrics-healthchecks-3.1.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.dropwizard.metrics/metrics-annotation/3.1.2/7ee8e9afe8e15f921a3bc9f8d4b1109b58b63d46/metrics-annotation-3.1.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-ldap/4.2.4.RELEASE/d2bbf754d58dd925e51b74b083066924e462e7b/spring-security-ldap-4.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.ldap/spring-ldap-core-tiger/2.3.2.RELEASE/68584f4d235624467a2a934c9086e227672641a/spring-ldap-core-tiger-2.3.2.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.ldap/spring-ldap-core/2.3.2.RELEASE/8bd3457711b1746af93daa0aa04c9fc886569b1/spring-ldap-core-2.3.2.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-swagger-common/2.6.0/f2d83b753d040d0f8d2f0b5cc47f3c5090322451/springfox-swagger-common-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-models/1.5.10/da29e4f4f7cff80b1ef134b0f3805013be443e58/swagger-models-1.5.10.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spring-web/2.6.0/6967afce7e53626a158e8274e1b914feb17e911/springfox-spring-web-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-schema/2.6.0/32a09229365ff56acdda5cc6e6bc761ef6a466b6/springfox-schema-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-spi/2.6.0/229cd26ab56faabfa16477c514dce61babd537b7/springfox-spi-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.springfox/springfox-core/2.6.0/4c7baa568129731284a32e631c21737573659abd/springfox-core-2.6.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-metadata/1.2.0.RELEASE/97223fc496b6cab31602eedbd4202aa4fff0d44f/spring-plugin-metadata-1.2.0.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.plugin/spring-plugin-core/1.2.0.RELEASE/f380e7760032e7d929184f8ad8a33716b75c0657/spring-plugin-core-1.2.0.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.chemistry.opencmis/chemistry-opencmis-client-api/0.10.0/b995bf75211e124296b187acde86d4b542450d6/chemistry-opencmis-client-api-0.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.chemistry.opencmis/chemistry-opencmis-client-bindings/0.10.0/4e6867b73c569939f3a7252994787e6d73178add/chemistry-opencmis-client-bindings-0.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.chemistry.opencmis/chemistry-opencmis-commons-impl/0.10.0/a1db82773ed554822f86cb53327bbcabf726eb35/chemistry-opencmis-commons-impl-0.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.chemistry.opencmis/chemistry-opencmis-commons-api/0.10.0/5ed7aaad77516a7682a3e3c8e62329827801857c/chemistry-opencmis-commons-api-0.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.slf4j/jul-to-slf4j/1.7.25/af5364cd6679bfffb114f0dec8a157aaa283b76/jul-to-slf4j-1.7.25.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.25/da76ca59f6a57ee3102f8f9bd9cee742973efa8a/slf4j-api-1.7.25.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-entitymanager/4.2.16.Final/53b726c9243cd6875657abfdb4561db206babf78/hibernate-entitymanager-4.2.16.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-core/4.2.16.Final/b803befa64ce3895fda01dc4445608ffb0af1e9e/hibernate-core-4.2.16.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hibernate/hibernate-validator/5.3.6.Final/4c730be8bf55a8e9a61e79a2f2c079abf48b718/hibernate-validator-5.3.6.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-fileupload/commons-fileupload/1.3.3/4ff14d809195b711fd6bcc87e6777f886730ca1/commons-fileupload-1.3.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.5/2852e6e05fbb95076fc091f6d1780f1f8fe35e0f/commons-io-2.5.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/3.7/d5416b3a41618422e12337c2d3b6152f0cd4d311/opencsv-3.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.activiti/activiti-process-validation/5.21.0/f2634742eac8a2ee295305908e062cf14bae879/activiti-process-validation-5.21.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.activiti/activiti-bpmn-model/5.21.0/49db8c0b5ce4e1ab7ef503f9e385e4c775a91910/activiti-bpmn-model-5.21.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-collections/commons-collections/3.2.2/8ad72fe39fa8c91eaaf12aadb21e0c3661fe26d5/commons-collections-3.2.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.annotation/jsr250-api/1.0/5025422767732a1ab45d93abfea846513d742dcf/jsr250-api-1.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.servlet/javax.servlet-api/3.1.0/3cd63d075497751784b2fa84be59432f4905bf7c/javax.servlet-api-3.1.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.validation/validation-api/1.1.0.Final/8613ae82954779d518631e05daa73a6a954817d5/validation-api-1.1.0.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch-cloud-aws/2.7.1/d261425481f4d35ff3fce7352e6232666038e1f7/elasticsearch-cloud-aws-2.7.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-s3/1.11.335/bc3b6c70be8c1c643885940cf88bd44d12599ea8/aws-java-sdk-s3-1.11.335.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-ec2/1.10.12/b0712cc659e72b9da0f5b03872d2476ab4a695f7/aws-java-sdk-ec2-1.10.12.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-kms/1.11.335/ae03f20a41d1bcd9a3733a002504effcb82d251d/aws-java-sdk-kms-1.11.335.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-java-sdk-core/1.11.335/6158201600eef7ad0453a26e357d66f1d504d054/aws-java-sdk-core-1.11.335.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.9.9/f7b520c458572890807d143670c9b24f4de90897/joda-time-2.9.9.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/joda-time/joda-time-hibernate/1.4/179cecf3473df1be04e1a7f3222c7bdde6792327/joda-time-hibernate-1.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-core/1.1.4.RELEASE/ec1eeaffc326171c8150deaeeecb2e1ab6ead87/spring-cloud-sleuth-core-1.1.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjrt/1.8.13/bfc5a877fd80648e5467239d370735654aaf7a92/aspectjrt-1.8.13.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.aspectj/aspectjweaver/1.8.13/ad94df2a28d658a40dc27bbaff6a1ce5fbf04e9b/aspectjweaver-1.8.13.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.mail/javax.mail-api/1.5.6/51c7a973efb1123558b62e95e31ab03cfa00fa7a/javax.mail-api-1.5.6.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-validator/commons-validator/1.4.0/42fa1046955ade59f5354a1876cfc523cea33815/commons-validator-1.4.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math/2.2/4877b85d388275f994a5cfc7eceb73a8045d3006/commons-math-2.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.elasticsearch/elasticsearch/1.7.3/90f2c130b6d1219994985b32ac9fde27728bb46e/elasticsearch-1.7.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.elasticsearch.client/elasticsearch-rest-client/5.6.1/90a750dadbb54ec952120b11765be623ecdead8b/elasticsearch-rest-client-5.6.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy-all/2.4.13/7e410735a50e495323dd4855ddd13ea7dad23ac1/groovy-all-2.4.13.jar:/Users/Labs/.m2/repository/com/alfresco/officeservices/aoservices/2.10.0/aoservices-2.10.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-drive/v2-rev119-1.18.0-rc/8d52407a17fcf02177ae2238957c6cd6de79e6b7/google-api-services-drive-v2-rev119-1.18.0-rc.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.18.0-rc/45b0d00b78197d8a3047751443c09538117d188b/google-api-client-1.18.0-rc.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.18.0-rc/5cc2dc4e3ba7f626c1a9db4fc5d2460c22275474/google-http-client-jackson2-1.18.0-rc.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security.oauth/spring-security-oauth2/2.0.14.RELEASE/2359228d52ed5307beb8491764bc751ce60064cb/spring-security-oauth2-2.0.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.box/box-java-sdk/1.0.0/2f0edac1b6ab344f037c1bf85ea59b96acf3c767/box-java-sdk-1.0.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-email/1.5/e8e677c6362eba14ff3c476ba63ccb83132dbd52/commons-email-1.5.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.mybatis/mybatis/3.3.1/b8911e00bb80bece8da02ed38d964bbcae1caf23/mybatis-3.3.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.pivotal.spring.cloud/spring-cloud-services-spring-connector/1.1.0.RELEASE/2a94e7222828347121e6d3e36a13eaf4d3a8088e/spring-cloud-services-spring-connector-1.1.0.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-spring-service-connector/1.2.4.RELEASE/e37e2b4336d067e157500b4f1840756a484cf8cc/spring-cloud-spring-service-connector-1.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context-support/4.3.14.RELEASE/c4f5f32bf8665bd05ee6b3b3f31bdb43fcb597ee/spring-context-support-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/4.2.4.RELEASE/309ce9b5bb4b1aee06e67517dabfd568b59678cf/spring-security-config-4.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-web/3.2.10.RELEASE/b925996ca5a7310e3315705cd2b69a15214ee3e1/spring-security-web-3.2.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/4.2.4.RELEASE/ce6b196526d5029a349897cd0b583dcf93af144/spring-security-core-4.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-actuator/1.5.9.RELEASE/c4aaf71a1298c1bde690fcf75df39036745396c6/spring-boot-actuator-1.5.9.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-webmvc/4.3.14.RELEASE/1571eab8a807005d424ca16fedd54b1f439787b2/spring-webmvc-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/4.3.14.RELEASE/a0c3bf3ad661db185675bd5af350f35ed11f0903/spring-web-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-autoconfigure/1.5.10.RELEASE/be96efab0d35181f18c486b0ec8d6a41a7042fce/spring-boot-autoconfigure-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/1.5.10.RELEASE/594b3efa04829f62754a19f59f81ba204636167a/spring-boot-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-context/4.3.14.RELEASE/e50a712960926c30e537ef4a633f5d9dd5a8b155/spring-context-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-orm/4.3.14.RELEASE/721bc451d02070954ebee039d419b410c4697fcb/spring-orm-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jdbc/4.3.14.RELEASE/1b1b9045d9ec1e067d99bf158210e9e7cf2ebfd2/spring-jdbc-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-tx/4.3.14.RELEASE/1c9449fcb805837db3c706eab4c729f89688a267/spring-tx-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-aop/4.3.14.RELEASE/dfe55b0592aead8e3eb0e6a4e98db433b9e09bd7/spring-aop-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-beans/4.3.14.RELEASE/7bcd17a68dd64e9447d7bff2c42ba7417678596e/spring-beans-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/log4j/log4j/1.2.17/5af35056b4d257e4b64b9e8069c0746e8b08629f/log4j-1.2.17.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-cloudfoundry-connector/1.2.4.RELEASE/e8f82e2c8b98a1ce6bce1567e4bfcb77db087361/spring-cloud-cloudfoundry-connector-1.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.3.41/a1f331124ba069a09e964ad2640c36f140f2c758/kotlin-stdlib-jdk7-1.3.41.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.41/e24bd38de28a326cce8b1f0d61e809e9a92dad6a/kotlin-stdlib-1.3.41.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.keycloak/keycloak-common/3.4.3.Final/c6897024164195534885e0f798de2441aa266224/keycloak-common-3.4.3.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-rsa/1.0.3.RELEASE/b0b1ee770597b5de1b51e9a889dfd2dc35d251b0/spring-security-rsa-1.0.3.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpkix-jdk15on/1.56/4648af70268b6fdb24674fb1fd7c1fcc73db1231/bcpkix-jdk15on-1.56.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.verhas/license3j/1.0.7/efa268d294ba9d904590f7a8b85623ed6b994a32/license3j-1.0.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcpg-jdk15on/1.52/ff4665a4b5633ff6894209d5dd10b7e612291858/bcpg-jdk15on-1.52.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.bouncycastle/bcprov-jdk15on/1.56/a153c6f9744a3e9dd6feab5e210e1c9861362ec7/bcprov-jdk15on-1.56.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.amazonaws/jmespath-java/1.11.335/d3a9a6ac58614396c9b8522dde6ae1f75671b7d7/jmespath-java-1.11.335.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.9.5/3490508379d065fe3fcb80042b62f630f7588606/jackson-databind-2.9.5.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.dataformat/jackson-dataformat-cbor/2.6.7/ba9e74b11135b18248e960df657a2b86ae77a079/jackson-dataformat-cbor-2.6.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.9.5/a22ac51016944b06fd9ffbc9541c6e7ce5eea117/jackson-core-2.9.5.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.18.0-rc/30281a66559f60a491748974ac17cec3483b873/google-oauth-client-1.18.0-rc.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.18.0-rc/880ad30d2b249a7591c195c2392646f1b146c139/google-http-client-1.18.0-rc.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient/4.5.5/1603dfd56ebcd583ccdf337b6c3984ac55d89e58/httpclient-4.5.5.jar:/Users/Labs/.m2/repository/org/alfresco/cmis/client/alfresco-opencmis-extension/0.7/alfresco-opencmis-extension-0.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.10/4b95f4897fa13f2cd904aee711aeafc0c5295cd8/commons-codec-1.10.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/math.geom2d/javaGeom/0.11.1/5951b33da14e56c9e2b1f741b9ba3531401393b6/javaGeom-0.11.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.mvel/mvel2/2.2.6.Final/ed1d833f854028773df9619adfc705a513605e90/mvel2-2.2.6.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/3.5.3/f346404c3876c5bd0e07a7e10b7565bdcd35dbab/liquibase-core-3.5.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.mchange/c3p0/0.9.5.2/5f86cb6130bc6e8475615ed82d5b5e6fb226a86a/c3p0-0.9.5.2.jar:/Users/Labs/.m2/repository/com/github/jgraph/jgraphx/v3.9.3/jgraphx-v3.9.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.imgscalr/imgscalr-lib/4.2/e2838f7119361511ef7d54fe0d502bf07f3325eb/imgscalr-lib-4.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-dbcp/commons-dbcp/1.4/30be73c965cc990b153a100aaaaafcf239f82d39/commons-dbcp-1.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-expression/4.3.14.RELEASE/58477b44debcb49b09e962e3047ee74c2c033e89/spring-expression-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/4.3.14.RELEASE/c70ddb6204457a802d1f6882d65bca3e5b3c41df/spring-core-4.3.14.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/antlr/antlr/2.7.7/83cd2cd674a217ade95a4bb83a8a14f351f48bd0/antlr-2.7.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hibernate.common/hibernate-commons-annotations/4.0.2.Final/94edcc5572efb02e123cc9ef7ad7d0fa5f76cf/hibernate-commons-annotations-4.0.2.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jboss.logging/jboss-logging/3.3.0.Final/3616bb87707910296e2c195dc016287080bba5af/jboss-logging-3.3.0.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/dom4j/dom4j/1.6.1/5d3ccc056b6f056dbf0dddfdf43894b9065a8f94/dom4j-1.6.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.javassist/javassist/3.18.1-GA/d9a09f7732226af26bf99f19e2cffe0ae219db5b/javassist-3.18.1-GA.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jboss.spec.javax.transaction/jboss-transaction-api_1.1_spec/1.0.1.Final/18f0e1d42f010a8b53aa447bf274a706d5148852/jboss-transaction-api_1.1_spec-1.0.1.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/3306a165afa81938fc3d8a0948e891de9f6b192b/hibernate-jpa-2.0-api-1.0.1.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.fasterxml/classmate/1.3.1/2ad2fd09dcf5607ca96f8ef432096a96986c40a/classmate-1.3.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.freemarker/freemarker/2.3.27-incubating/fa71f754fd3c4123358c2b1e5eef630cd99d752f/freemarker-2.3.27-incubating.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-beanutils/commons-beanutils/1.8.3/686ef3410bcf4ab8ce7fd0b899e832aaba5facf7/commons-beanutils-1.8.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-digester/commons-digester/1.8/dc6a73fdbd1fa3f0944e8497c6c872fa21dca37e/commons-digester-1.8.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-logging/commons-logging/1.2/4bfc12adfe4842bf07b657f0369c4cb522955686/commons-logging-1.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-suggest/4.10.4/9a1b5e1974fe61e16d78e8a5b26f802cb2fb9863/lucene-suggest-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-analyzers-common/4.10.4/438dca3789b04735fe6b223d4aded3561fc5c039/lucene-analyzers-common-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-highlighter/4.10.4/8ceadd928c9d8efef7b069fd850f25db42fbec8b/lucene-highlighter-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queryparser/4.10.4/432d1e1b0aa99695bcaadf49c380c87b17a6f01b/lucene-queryparser-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-join/4.10.4/abc55f0284b01a23cf41422f3596bc1fba06701b/lucene-join-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-grouping/4.10.4/bb60a4aa452d2783584c0b2e832564741b88f8f5/lucene-grouping-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-spatial/4.10.4/79ac88a4f91125f47a1a8e28fffae9860e7b3ca6/lucene-spatial-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-queries/4.10.4/f3b55bc9553d622760b585550ffa6dbd082f32f3/lucene-queries-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-memory/4.10.4/d80858a3954435b5c731a24945505b99bd5c159c/lucene-memory-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-sandbox/4.10.4/1600fe003fd6fef68cebca0802c96227501feb99/lucene-sandbox-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-misc/4.10.4/1dea0f279c158875b2374bc03fb7b502b559ea84/lucene-misc-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.lucene/lucene-core/4.10.4/cbdb5f686a85e391d9b88f0bae9e018f4d9472ff/lucene-core-4.10.4.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.17/7a27ea250c5130b2922b86dea63cbb1cc10a660c/snakeyaml-1.17.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore/4.4.9/a86ce739e5a7175b4b234c290a00a5fdb80957a0/httpcore-4.4.9.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpasyncclient/4.1.2/95aa3e6fb520191a0970a73cf09f62948ee614be/httpasyncclient-4.1.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpcore-nio/4.4.5/f4be009e7505f6ceddf21e7960c759f413f15056/httpcore-nio-4.4.5.jar:/Users/Labs/.m2/repository/com/aspose/aspose-words/18.4/aspose-words-18.4-jdk16.jar:/Users/Labs/.m2/repository/com/aspose/aspose-slides/18.3/aspose-slides-18.3-jdk16.jar:/Users/Labs/.m2/repository/com/aspose/aspose-pdf/18.3/aspose-pdf-18.3.jar:/Users/Labs/.m2/repository/com/aspose/aspose-cells/18.3/aspose-cells-18.3.jar:/Users/Labs/.m2/repository/com/aspose/aspose-diagram/18.3/aspose-diagram-18.3-jdk16.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/commons-pool/commons-pool/1.6/4572d589699f09d866a226a14b7f4323c6d8f040/commons-pool-1.6.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-mapper-asl/1.9.13/1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7/jackson-mapper-asl-1.9.13.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.eclipsesource.minimal-json/minimal-json/0.9.1/9b409b88e38b11519ce3334cbcdda361462ac72d/minimal-json-0.9.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.swagger/swagger-annotations/1.5.10/246ec68bce560227d3633d5ab5979437544bd6dc/swagger-annotations-1.5.10.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct/1.0.0.Final/794bb2c7d3dd69211deb22857d92fb4c5361be3f/mapstruct-1.0.0.Final.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/io.pivotal.spring.cloud/spring-cloud-services-connector-core/1.1.0.RELEASE/2946e3f51cb7ffe8907c58101f64c2e350d49af9/spring-cloud-services-connector-core-1.1.0.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.16.8/2ce9de13f277ec1600e7e04231477e3e5f59d317/lombok-1.16.8.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-core/1.2.4.RELEASE/db3b8f95e55df0be9b6b3ed5454ff0dbff8c0ede/spring-cloud-core-1.2.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.41/2ecf4aa059427d7186312fd1736afedf7972e7f7/kotlin-stdlib-common-1.3.41.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.9.0/7c10d545325e3a6e72e06381afe469fd40eb701/jackson-annotations-2.9.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.felix/org.osgi.core/1.0.0/8a73e8fe4cf05c6b2565f89695ac2d676d76202f/org.osgi.core-1.0.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-core/1.1.11/88b8df40340eed549fb07e2613879bf6b006704d/logback-core-1.1.11.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.mchange/mchange-commons-java/0.2.11/2a6a6c1fe25f28f5a073171956ce6250813467ef/mchange-commons-java-0.2.11.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.mail/javax.mail/1.5.6/ab5daef2f881c42c8e280cbe918ec4d7fdfd7efe/javax.mail-1.5.6.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-tomcat/1.5.10.RELEASE/11e474e265f1c68fc435dddbac42ab3574b5e4b6/spring-boot-starter-tomcat-1.5.10.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.spatial4j/spatial4j/0.4.1/4234d12b1ba4d4b539fb3e29edd948a99539d9eb/spatial4j-0.4.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/aopalliance/aopalliance/1.0/235ba8b489512805ac13a8f9ea77a1ca5ebe3e8/aopalliance-1.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.codehaus.jackson/jackson-core-asl/1.9.13/3c304d70f42f832e0a86d45bd437f692129299a4/jackson-core-asl-1.9.13.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-context/1.1.9.RELEASE/89c302da79718884814b90d53541e0474f4e1c37/spring-cloud-context-1.1.9.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-commons/1.1.9.RELEASE/d6b9891d82eb5b419e12cabd62266ab73a157a6f/spring-cloud-commons-1.1.9.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/woodstox-core-asl/4.2.0/7a3784c65cfa5c0553f31d000b43346feb1f4ee3/woodstox-core-asl-4.2.0.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.xml.ws/jaxws-rt/2.1.7/e4da64bb02bef8ebb174ca17747e6a6bf4a01eeb/jaxws-rt-2.1.7.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/software.amazon.ion/ion-java/1.0.2/ee9dacea7726e495f8352b81c12c23834ffbc564/ion-java-1.0.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.xml.stream.buffer/streambuffer/0.9/f4b8b8575fcc558768df76658192f3c0202ca22a/streambuffer-0.9.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.xml.ws/jaxws-api/2.1/204ea80c6a85f009c90bddda8c93c17644702022/jaxws-api-2.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-impl/2.1.11/69e2546dae3895d25aeb5e70225e492d1b9bd696/jaxb-impl-2.1.11.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.1/d68570e722cffe2000358ce9c661a0b0bf1ebe11/jaxb-api-2.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.xml.messaging.saaj/saaj-impl/1.3.3/4e0c93e61ec6acf0a3ac96e692a58d184fba1456/saaj-impl-1.3.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.xml.soap/saaj-api/1.3/4e0c860c1bf18b54ccb10a3c7ab2e4d61452faff/saaj-api-1.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.activation/activation/1.1/e6cb541461c2834bdea3eb920f1884d1eb508b50/activation-1.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-websocket/8.5.27/3cba1c5187a17b0233de5712024d6e144036ba9a/tomcat-embed-websocket-8.5.27.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-core/8.5.27/a10612f0af27c7bfcc4e8d88393adad1fc5b4ece/tomcat-embed-core-8.5.27.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.tomcat.embed/tomcat-embed-el/8.5.27/5a591bcf5c930d2b37bb40c0f95180604a3b1a57/tomcat-embed-el-8.5.27.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-crypto/4.0.4.RELEASE/26da39c04b45b12cf4e6e31ee0406531c0187ee3/spring-security-crypto-4.0.4.RELEASE.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.codehaus.woodstox/stax2-api/3.1.1/466eab062e9d1a3ce2c4631b6d09b5e5c0cbd1b/stax2-api-3.1.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/javax.xml.stream/stax-api/1.0-2/d6337b0de8b25e53e81b922352fbea9f9f57ba0b/stax-api-1.0-2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jvnet.staxex/stax-ex/1.8.1/78011e483a21102fb4858f3e8f269a677e50aa23/stax-ex-1.8.1.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/com.sun.org.apache.xml.internal/resolver/20050927/ee4db4a5f15cbdb453808c2839f08240ac231e46/resolver-20050927.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.jvnet/mimepull/1.3/83e6a9ba6a7fe454202a386ad8bf2837ae18bfe3/mimepull-1.3.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-annotations-api/8.5.27/122c0a4acaba72bf4590e83c9fbcb3475c46edc5/tomcat-annotations-api-8.5.27.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/jakarta.xml.bind/jakarta.xml.bind-api/2.3.2/8d49996a4338670764d7ca4b85a1c4ccf7fe665d/jakarta.xml.bind-api-2.3.2.jar:/Users/Labs/.gradle/caches/modules-2/files-2.1/jakarta.activation/jakarta.activation-api/1.2.1/562a587face36ec7eff2db7f2fc95425c6602bc1/jakarta.activation-api-1.2.1.jar, user.name=Labs, java.vm.specification.version=1.8, sun.java.command=worker.org.gradle.process.internal.worker.GradleWorkerMain 'Gradle Test Executor 28', java.home=/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre, sun.arch.data.model=64, user.language=en, java.specification.vendor=Oracle Corporation, awt.toolkit=sun.lwawt.macosx.LWCToolkit, java.vm.info=mixed mode, java.version=1.8.0_212, java.ext.dirs=/Users/Labs/Library/Java/Extensions:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.boot.class.path=/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/resources.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/rt.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/sunrsasign.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/jsse.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/jce.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/charsets.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/lib/jfr.jar:/Users/Labs/.sdkman/candidates/java/8.0.212.hs-adpt/jre/classes, java.vendor=AdoptOpenJDK, org.gradle.test.worker=28, file.separator=/, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, sun.io.unicode.encoding=UnicodeBig, sun.cpu.endian=little, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.isalist=}}, SystemEnvironmentPropertySource@1498230332 {name='systemEnvironment', properties={GIT_DUET_ROTATE_AUTHOR=1, PATH=/Users/Labs/.sdkman/candidates/java/current/bin:/opt/apache-maven-3.5.4/bin:/Users/Labs/.nvm/versions/node/v9.5.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin, SDKMAN_VERSION=5.7.3+337, JAVA_HOME=/Users/Labs/.sdkman/candidates/java/current, JAVA_11_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home, MAVEN_HOME=/opt/apache-maven-3.5.4, VERSIONER_PYTHON_VERSION=2.7, SDKMAN_DIR=/Users/Labs/.sdkman, LOGNAME=Labs, XPC_SERVICE_NAME=com.jetbrains.intellij.29292, SDKMAN_CANDIDATES_DIR=/Users/Labs/.sdkman/candidates, NVM_CD_FLAGS=, NVM_DIR=/Users/Labs/.nvm, SHELL=/bin/bash, SDKMAN_CANDIDATES_API=https://api.sdkman.io/2, SDKMAN_PLATFORM=Darwin, VERSIONER_PYTHON_PREFER_32_BIT=no, USER=Labs, TMPDIR=/var/folders/06/jw15yh494915l9jbdb5zm8g40000gp/T/, JAVA_MAIN_CLASS_24564=worker.org.gradle.process.internal.worker.GradleWorkerMain, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.77McMtUKc1/Listeners, XPC_FLAGS=0x0, __CF_USER_TEXT_ENCODING=0x1F6:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.tVtMvRCZ1G/Render, LC_CTYPE=en_US.UTF-8, NVM_BIN=/Users/Labs/.nvm/versions/node/v9.5.0/bin, HOME=/Users/Labs}}]
+05:15:02,366 [Test worker] INFO  org.springframework.beans.factory.xml.XmlBeanDefinitionReader  - Loading XML bean definitions from class path resource [activiti.cfg.xml]
+05:15:02,379 [Test worker] DEBUG org.springframework.beans.factory.xml.DefaultDocumentLoader  - Using JAXP provider [com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderFactoryImpl]
+05:15:02,402 [Test worker] DEBUG org.springframework.beans.factory.xml.PluggableSchemaResolver  - Loading schema mappings from [META-INF/spring.schemas]
+05:15:02,411 [Test worker] DEBUG org.springframework.beans.factory.xml.PluggableSchemaResolver  - Loaded schema mappings: {http://www.springframework.org/schema/task/spring-task-3.0.xsd=org/springframework/scheduling/config/spring-task-3.0.xsd, http://www.springframework.org/schema/aop/spring-aop-4.3.xsd=org/springframework/aop/config/spring-aop-4.3.xsd, http://www.springframework.org/schema/lang/spring-lang-2.0.xsd=org/springframework/scripting/config/spring-lang-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx-3.0.xsd=org/springframework/transaction/config/spring-tx-3.0.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.5.xsd=org/springframework/data/repository/config/spring-repository-1.5.xsd, http://www.springframework.org/schema/lang/spring-lang-3.0.xsd=org/springframework/scripting/config/spring-lang-3.0.xsd, http://www.springframework.org/schema/cache/spring-cache-4.0.xsd=org/springframework/cache/config/spring-cache-4.0.xsd, http://www.springframework.org/schema/util/spring-util-4.1.xsd=org/springframework/beans/factory/xml/spring-util-4.1.xsd, http://www.springframework.org/schema/tx/spring-tx-4.0.xsd=org/springframework/transaction/config/spring-tx-4.0.xsd, http://www.springframework.org/schema/beans/spring-beans.xsd=org/springframework/beans/factory/xml/spring-beans-4.3.xsd, http://www.springframework.org/schema/tool/spring-tool-4.1.xsd=org/springframework/beans/factory/xml/spring-tool-4.1.xsd, http://www.springframework.org/schema/ldap/spring-ldap-2.1.xsd=org/springframework/ldap/config/spring-ldap-2.1.xsd, http://www.springframework.org/schema/beans/spring-beans-3.0.xsd=org/springframework/beans/factory/xml/spring-beans-3.0.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.0.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.0.xsd, http://www.springframework.org/schema/beans/spring-beans-4.0.xsd=org/springframework/beans/factory/xml/spring-beans-4.0.xsd, http://www.springframework.org/schema/task/spring-task-4.3.xsd=org/springframework/scheduling/config/spring-task-4.3.xsd, http://www.springframework.org/schema/context/spring-context-3.2.xsd=org/springframework/context/config/spring-context-3.2.xsd, http://www.springframework.org/schema/context/spring-context-4.2.xsd=org/springframework/context/config/spring-context-4.2.xsd, http://www.springframework.org/schema/tx/spring-tx-2.0.xsd=org/springframework/transaction/config/spring-tx-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.5.xsd=org/springframework/ejb/config/spring-jee-2.5.xsd, http://www.springframework.org/schema/util/spring-util-3.1.xsd=org/springframework/beans/factory/xml/spring-util-3.1.xsd, http://www.springframework.org/schema/tool/spring-tool-3.1.xsd=org/springframework/beans/factory/xml/spring-tool-3.1.xsd, http://www.springframework.org/schema/lang/spring-lang-4.3.xsd=org/springframework/scripting/config/spring-lang-4.3.xsd, http://www.springframework.org/schema/beans/spring-beans-2.0.xsd=org/springframework/beans/factory/xml/spring-beans-2.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd=org/springframework/jdbc/config/spring-jdbc-3.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.1.xsd=org/springframework/jdbc/config/spring-jdbc-4.1.xsd, http://www.springframework.org/schema/plugin/spring-plugin.xsd=org/springframework/plugin/core/config/spring-plugin.xsd, http://www.springframework.org/schema/tool/spring-tool.xsd=org/springframework/beans/factory/xml/spring-tool-4.3.xsd, http://www.springframework.org/schema/jee/spring-jee-4.1.xsd=org/springframework/ejb/config/spring-jee-4.1.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.8.xsd=org/springframework/data/repository/config/spring-repository-1.8.xsd, http://www.springframework.org/schema/cache/spring-cache-4.3.xsd=org/springframework/cache/config/spring-cache-4.3.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc.xsd=org/springframework/jdbc/config/spring-jdbc-4.3.xsd, http://www.springframework.org/schema/tx/spring-tx-4.3.xsd=org/springframework/transaction/config/spring-tx-4.3.xsd, http://www.springframework.org/schema/security/spring-security-3.0.3.xsd=org/springframework/security/config/spring-security-3.0.3.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.3.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.3.xsd, http://www.springframework.org/schema/beans/spring-beans-4.3.xsd=org/springframework/beans/factory/xml/spring-beans-4.3.xsd, http://www.springframework.org/schema/context/spring-context.xsd=org/springframework/context/config/spring-context-4.3.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd=org/springframework/web/servlet/config/spring-mvc-4.2.xsd, http://www.springframework.org/schema/security/spring-security-2.0.2.xsd=org/springframework/security/config/spring-security-2.0.2.xsd, http://www.springframework.org/schema/lang/spring-lang.xsd=org/springframework/scripting/config/spring-lang-4.3.xsd, http://www.springframework.org/schema/jee/spring-jee-3.1.xsd=org/springframework/ejb/config/spring-jee-3.1.xsd, http://www.springframework.org/schema/cloud/spring-cloud-0.1.xsd=org/springframework/cloud/config/xml/spring-cloud.xsd, http://www.springframework.org/schema/security/spring-security-3.2.xsd=org/springframework/security/config/spring-security-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-4.2.xsd=org/springframework/aop/config/spring-aop-4.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd=org/springframework/web/servlet/config/spring-mvc-3.2.xsd, http://www.springframework.org/schema/security/spring-security-4.2.xsd=org/springframework/security/config/spring-security-4.2.xsd, http://www.springframework.org/schema/context/spring-context-2.5.xsd=org/springframework/context/config/spring-context-2.5.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.4.xsd=org/springframework/data/repository/config/spring-repository-1.4.xsd, http://www.springframework.org/schema/util/spring-util-4.0.xsd=org/springframework/beans/factory/xml/spring-util-4.0.xsd, http://www.springframework.org/schema/tool/spring-tool-4.0.xsd=org/springframework/beans/factory/xml/spring-tool-4.0.xsd, http://www.springframework.org/schema/ldap/spring-ldap-2.0.xsd=org/springframework/ldap/config/spring-ldap-2.0.xsd, http://www.springframework.org/schema/data/repository/spring-repository.xsd=org/springframework/data/repository/config/spring-repository-1.11.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.8.xsd, http://www.springframework.org/schema/task/spring-task-4.2.xsd=org/springframework/scheduling/config/spring-task-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-3.2.xsd=org/springframework/aop/config/spring-aop-3.2.xsd, http://www.springframework.org/schema/context/spring-context-3.1.xsd=org/springframework/context/config/spring-context-3.1.xsd, http://www.springframework.org/schema/context/spring-context-4.1.xsd=org/springframework/context/config/spring-context-4.1.xsd, http://www.springframework.org/schema/util/spring-util-2.0.xsd=org/springframework/beans/factory/xml/spring-util-2.0.xsd, http://www.springframework.org/schema/tool/spring-tool-2.0.xsd=org/springframework/beans/factory/xml/spring-tool-2.0.xsd, http://www.springframework.org/schema/tx/spring-tx.xsd=org/springframework/transaction/config/spring-tx-4.3.xsd, http://www.springframework.org/schema/util/spring-util-3.0.xsd=org/springframework/beans/factory/xml/spring-util-3.0.xsd, http://www.springframework.org/schema/tool/spring-tool-3.0.xsd=org/springframework/beans/factory/xml/spring-tool-3.0.xsd, http://www.springframework.org/schema/lang/spring-lang-4.2.xsd=org/springframework/scripting/config/spring-lang-4.2.xsd, http://www.springframework.org/schema/util/spring-util.xsd=org/springframework/beans/factory/xml/spring-util-4.3.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd=org/springframework/jdbc/config/spring-jdbc-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd=org/springframework/jdbc/config/spring-jdbc-4.0.xsd, http://www.springframework.org/schema/task/spring-task-3.2.xsd=org/springframework/scheduling/config/spring-task-3.2.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.0.xsd=org/springframework/data/repository/config/spring-repository-1.0.xsd, http://www.springframework.org/schema/jee/spring-jee-4.0.xsd=org/springframework/ejb/config/spring-jee-4.0.xsd, http://www.springframework.org/schema/cache/spring-cache-3.2.xsd=org/springframework/cache/config/spring-cache-3.2.xsd, http://www.springframework.org/schema/tx/spring-tx-3.2.xsd=org/springframework/transaction/config/spring-tx-3.2.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.7.xsd=org/springframework/data/repository/config/spring-repository-1.7.xsd, http://www.springframework.org/schema/lang/spring-lang-3.2.xsd=org/springframework/scripting/config/spring-lang-3.2.xsd, http://www.springframework.org/schema/cache/spring-cache-4.2.xsd=org/springframework/cache/config/spring-cache-4.2.xsd, http://www.springframework.org/schema/util/spring-util-4.3.xsd=org/springframework/beans/factory/xml/spring-util-4.3.xsd, http://www.springframework.org/schema/tool/spring-tool-4.3.xsd=org/springframework/beans/factory/xml/spring-tool-4.3.xsd, http://www.springframework.org/schema/tx/spring-tx-4.2.xsd=org/springframework/transaction/config/spring-tx-4.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.2.xsd=org/springframework/beans/factory/xml/spring-beans-3.2.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.2.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.2.xsd, http://www.springframework.org/schema/beans/spring-beans-4.2.xsd=org/springframework/beans/factory/xml/spring-beans-4.2.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd=org/springframework/web/servlet/config/spring-mvc-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-2.5.xsd=org/springframework/aop/config/spring-aop-2.5.xsd, http://www.ryantenney.com/schema/metrics/metrics-3.1.xsd=com/ryantenney/metrics/spring/config/metrics-3.1.xsd, http://www.springframework.org/schema/security/spring-security-oauth2.xsd=org/springframework/security/oauth2/spring-security-oauth2-2.0.xsd, http://www.springframework.org/schema/jee/spring-jee-2.0.xsd=org/springframework/ejb/config/spring-jee-2.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.1.xsd=org/springframework/security/config/spring-security-2.0.1.xsd, http://www.springframework.org/schema/jee/spring-jee-3.0.xsd=org/springframework/ejb/config/spring-jee-3.0.xsd, http://www.springframework.org/schema/ldap/spring-ldap.xsd=org/springframework/ldap/config/spring-ldap-2.2.xsd, http://www.springframework.org/schema/security/spring-security-3.1.xsd=org/springframework/security/config/spring-security-3.1.xsd, http://www.springframework.org/schema/aop/spring-aop-4.1.xsd=org/springframework/aop/config/spring-aop-4.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd=org/springframework/web/servlet/config/spring-mvc-3.1.xsd, http://www.springframework.org/schema/security/spring-security-4.1.xsd=org/springframework/security/config/spring-security-4.1.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.3.xsd=org/springframework/jdbc/config/spring-jdbc-4.3.xsd, http://www.springframework.org/schema/cloud/spring-cloud.xsd=org/springframework/cloud/config/xml/spring-cloud.xsd, http://www.springframework.org/schema/jee/spring-jee-4.3.xsd=org/springframework/ejb/config/spring-jee-4.3.xsd, http://www.springframework.org/schema/lang/spring-lang-2.5.xsd=org/springframework/scripting/config/spring-lang-2.5.xsd, http://www.springframework.org/schema/security/spring-security-oauth2-2.0.xsd=org/springframework/security/oauth2/spring-security-oauth2-2.0.xsd, http://www.springframework.org/schema/task/spring-task-4.1.xsd=org/springframework/scheduling/config/spring-task-4.1.xsd, http://www.springframework.org/schema/aop/spring-aop-3.1.xsd=org/springframework/aop/config/spring-aop-3.1.xsd, http://www.springframework.org/schema/context/spring-context-3.0.xsd=org/springframework/context/config/spring-context-3.0.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.11.xsd=org/springframework/data/repository/config/spring-repository-1.11.xsd, http://www.springframework.org/schema/context/spring-context-4.0.xsd=org/springframework/context/config/spring-context-4.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.4.xsd=org/springframework/security/config/spring-security-2.0.4.xsd, http://www.springframework.org/schema/lang/spring-lang-4.1.xsd=org/springframework/scripting/config/spring-lang-4.1.xsd, http://www.springframework.org/schema/tx/spring-tx-2.5.xsd=org/springframework/transaction/config/spring-tx-2.5.xsd, http://www.springframework.org/schema/security/spring-security-oauth2-1.0.xsd=org/springframework/security/oauth2/spring-security-oauth2-1.0.xsd, http://www.springframework.org/schema/beans/spring-beans-2.5.xsd=org/springframework/beans/factory/xml/spring-beans-2.5.xsd, http://www.springframework.org/schema/task/spring-task-3.1.xsd=org/springframework/scheduling/config/spring-task-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-3.1.xsd=org/springframework/cache/config/spring-cache-3.1.xsd, http://www.springframework.org/schema/tx/spring-tx-3.1.xsd=org/springframework/transaction/config/spring-tx-3.1.xsd, http://www.springframework.org/schema/data/repository/spring-repository-1.6.xsd=org/springframework/data/repository/config/spring-repository-1.6.xsd, http://www.springframework.org/schema/mvc/spring-mvc.xsd=org/springframework/web/servlet/config/spring-mvc-4.3.xsd, http://www.springframework.org/schema/lang/spring-lang-3.1.xsd=org/springframework/scripting/config/spring-lang-3.1.xsd, http://www.springframework.org/schema/cache/spring-cache-4.1.xsd=org/springframework/cache/config/spring-cache-4.1.xsd, http://www.springframework.org/schema/util/spring-util-4.2.xsd=org/springframework/beans/factory/xml/spring-util-4.2.xsd, http://www.springframework.org/schema/tool/spring-tool-4.2.xsd=org/springframework/beans/factory/xml/spring-tool-4.2.xsd, http://www.springframework.org/schema/tx/spring-tx-4.1.xsd=org/springframework/transaction/config/spring-tx-4.1.xsd, http://www.springframework.org/schema/ldap/spring-ldap-2.2.xsd=org/springframework/ldap/config/spring-ldap-2.2.xsd, http://www.springframework.org/schema/beans/spring-beans-3.1.xsd=org/springframework/beans/factory/xml/spring-beans-3.1.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.1.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.1.xsd, http://www.springframework.org/schema/beans/spring-beans-4.1.xsd=org/springframework/beans/factory/xml/spring-beans-4.1.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd=org/springframework/web/servlet/config/spring-mvc-4.0.xsd, http://www.ryantenney.com/schema/metrics/metrics-3.0.xsd=com/ryantenney/metrics/spring/config/metrics-3.0.xsd, http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd=org/springframework/data/jpa/repository/config/spring-jpa-1.8.xsd, http://www.springframework.org/schema/context/spring-context-4.3.xsd=org/springframework/context/config/spring-context-4.3.xsd, http://www.springframework.org/schema/util/spring-util-3.2.xsd=org/springframework/beans/factory/xml/spring-util-3.2.xsd, http://www.springframework.org/schema/tool/spring-tool-3.2.xsd=org/springframework/beans/factory/xml/spring-tool-3.2.xsd, http://www.springframework.org/schema/security/spring-security-3.0.xsd=org/springframework/security/config/spring-security-3.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-3.2.xsd=org/springframework/jdbc/config/spring-jdbc-3.2.xsd, http://www.springframework.org/schema/aop/spring-aop-4.0.xsd=org/springframework/aop/config/spring-aop-4.0.xsd, http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd=org/springframework/web/servlet/config/spring-mvc-3.0.xsd, http://www.springframework.org/schema/security/spring-security-4.0.xsd=org/springframework/security/config/spring-security-4.0.xsd, http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd=org/springframework/jdbc/config/spring-jdbc-4.2.xsd, http://www.springframework.org/schema/security/spring-security.xsd=org/springframework/security/config/spring-security-4.2.xsd, http://www.ryantenney.com/schema/metrics/metrics.xsd=com/ryantenney/metrics/spring/config/metrics.xsd, http://www.springframework.org/schema/jee/spring-jee-4.2.xsd=org/springframework/ejb/config/spring-jee-4.2.xsd, http://www.springframework.org/schema/aop/spring-aop-2.0.xsd=org/springframework/aop/config/spring-aop-2.0.xsd, http://www.springframework.org/schema/security/spring-security-2.0.xsd=org/springframework/security/config/spring-security-2.0.xsd, http://www.springframework.org/schema/task/spring-task-4.0.xsd=org/springframework/scheduling/config/spring-task-4.0.xsd, http://www.springframework.org/schema/aop/spring-aop-3.0.xsd=org/springframework/aop/config/spring-aop-3.0.xsd, http://www.springframework.org/schema/jee/spring-jee.xsd=org/springframework/ejb/config/spring-jee-4.3.xsd, http://www.springframework.org/schema/cache/spring-cache.xsd=org/springframework/cache/config/spring-cache-4.3.xsd, http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd=org/springframework/web/servlet/config/spring-mvc-4.3.xsd, http://www.springframework.org/schema/task/spring-task.xsd=org/springframework/scheduling/config/spring-task-4.3.xsd, http://www.springframework.org/schema/aop/spring-aop.xsd=org/springframework/aop/config/spring-aop-4.3.xsd, http://www.springframework.org/schema/lang/spring-lang-4.0.xsd=org/springframework/scripting/config/spring-lang-4.0.xsd, http://www.springframework.org/schema/jee/spring-jee-3.2.xsd=org/springframework/ejb/config/spring-jee-3.2.xsd, http://www.springframework.org/schema/util/spring-util-2.5.xsd=org/springframework/beans/factory/xml/spring-util-2.5.xsd, http://www.springframework.org/schema/tool/spring-tool-2.5.xsd=org/springframework/beans/factory/xml/spring-tool-2.5.xsd}
+05:15:02,414 [Test worker] DEBUG org.springframework.beans.factory.xml.PluggableSchemaResolver  - Found XML schema [http://www.springframework.org/schema/beans/spring-beans.xsd] in classpath: org/springframework/beans/factory/xml/spring-beans-4.3.xsd
+05:15:02,453 [Test worker] DEBUG org.springframework.beans.factory.xml.DefaultBeanDefinitionDocumentReader  - Loading bean definitions
+05:15:02,466 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'processEngineConfiguration'
+05:15:02,466 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'processEngineConfiguration'
+05:15:02,652 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Eagerly caching bean 'processEngineConfiguration' to allow for resolving potential circular references
+05:15:02,736 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Finished creating instance of bean 'processEngineConfiguration'
+05:15:02,769 [Test worker] DEBUG org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl  - initializing datasource to db: jdbc:h2:mem:activiti;DB_CLOSE_DELAY=1000
+05:15:02,776 [Test worker] DEBUG org.apache.ibatis.logging.LogFactory  - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+05:15:02,780 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - PooledDataSource forcefully closed/removed all connections.
+05:15:02,932 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Created connection 2056591529.
+05:15:02,935 [Test worker] DEBUG org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl  - database product name: 'H2'
+05:15:02,935 [Test worker] DEBUG org.activiti.engine.impl.cfg.ProcessEngineConfigurationImpl  - using database type: h2
+05:15:02,936 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:03,610 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:03,610 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting SchemaOperationsProcessEngineBuild --------------------------------------------------------
+05:15:03,619 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+05:15:03,619 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 2056591529 from pool.
+05:15:03,620 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,623 [Test worker] INFO  org.activiti.engine.impl.db.DbSqlSession  - performing create on engine with resource org/activiti/db/create/activiti.h2.create.engine.sql
+05:15:03,624 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_GE_PROPERTY ( 
+NAME_ varchar(64), 
+VALUE_ varchar(300), 
+REV_ integer, 
+primary key (NAME_) 
+)
+05:15:03,624 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: insert into ACT_GE_PROPERTY 
+values ('schema.version', '5.21.0.0', 1)
+05:15:03,626 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: insert into ACT_GE_PROPERTY 
+values ('schema.history', 'create(5.21.0.0)', 1)
+05:15:03,626 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: insert into ACT_GE_PROPERTY 
+values ('next.dbid', '1', 1)
+05:15:03,626 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_GE_BYTEARRAY ( 
+ID_ varchar(64), 
+REV_ integer, 
+NAME_ varchar(255), 
+DEPLOYMENT_ID_ varchar(64), 
+BYTES_ longvarbinary, 
+GENERATED_ bit, 
+primary key (ID_) 
+)
+05:15:03,627 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RE_DEPLOYMENT ( 
+ID_ varchar(64), 
+NAME_ varchar(255), 
+CATEGORY_ varchar(255), 
+TENANT_ID_ varchar(255) default '', 
+DEPLOY_TIME_ timestamp, 
+primary key (ID_) 
+)
+05:15:03,628 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RE_MODEL ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+NAME_ varchar(255), 
+KEY_ varchar(255), 
+CATEGORY_ varchar(255), 
+CREATE_TIME_ timestamp, 
+LAST_UPDATE_TIME_ timestamp, 
+VERSION_ integer, 
+META_INFO_ varchar(4000), 
+DEPLOYMENT_ID_ varchar(64), 
+EDITOR_SOURCE_VALUE_ID_ varchar(64), 
+EDITOR_SOURCE_EXTRA_VALUE_ID_ varchar(64), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,629 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_EXECUTION ( 
+ID_ varchar(64), 
+REV_ integer, 
+PROC_INST_ID_ varchar(64), 
+BUSINESS_KEY_ varchar(255), 
+PARENT_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+SUPER_EXEC_ varchar(64), 
+ACT_ID_ varchar(255), 
+IS_ACTIVE_ bit, 
+IS_CONCURRENT_ bit, 
+IS_SCOPE_ bit, 
+IS_EVENT_SCOPE_ bit, 
+SUSPENSION_STATE_ integer, 
+CACHED_ENT_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+NAME_ varchar(255), 
+LOCK_TIME_ timestamp, 
+primary key (ID_) 
+)
+05:15:03,630 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_JOB ( 
+ID_ varchar(64) NOT NULL, 
+REV_ integer, 
+TYPE_ varchar(255) NOT NULL, 
+LOCK_EXP_TIME_ timestamp, 
+LOCK_OWNER_ varchar(255), 
+EXCLUSIVE_ boolean, 
+EXECUTION_ID_ varchar(64), 
+PROCESS_INSTANCE_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+RETRIES_ integer, 
+EXCEPTION_STACK_ID_ varchar(64), 
+EXCEPTION_MSG_ varchar(4000), 
+DUEDATE_ timestamp, 
+REPEAT_ varchar(255), 
+HANDLER_TYPE_ varchar(255), 
+HANDLER_CFG_ varchar(4000), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,631 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RE_PROCDEF ( 
+ID_ varchar(64) NOT NULL, 
+REV_ integer, 
+CATEGORY_ varchar(255), 
+NAME_ varchar(255), 
+KEY_ varchar(255) NOT NULL, 
+VERSION_ integer NOT NULL, 
+DEPLOYMENT_ID_ varchar(64), 
+RESOURCE_NAME_ varchar(4000), 
+DGRM_RESOURCE_NAME_ varchar(4000), 
+DESCRIPTION_ varchar(4000), 
+HAS_START_FORM_KEY_ bit, 
+HAS_GRAPHICAL_NOTATION_ bit, 
+SUSPENSION_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,633 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_TASK ( 
+ID_ varchar(64), 
+REV_ integer, 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+NAME_ varchar(255), 
+PARENT_TASK_ID_ varchar(64), 
+DESCRIPTION_ varchar(4000), 
+TASK_DEF_KEY_ varchar(255), 
+OWNER_ varchar(255), 
+ASSIGNEE_ varchar(255), 
+DELEGATION_ varchar(64), 
+PRIORITY_ integer, 
+CREATE_TIME_ timestamp, 
+DUE_DATE_ timestamp, 
+CATEGORY_ varchar(255), 
+SUSPENSION_STATE_ integer, 
+TENANT_ID_ varchar(255) default '', 
+FORM_KEY_ varchar(255), 
+primary key (ID_) 
+)
+05:15:03,635 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_IDENTITYLINK ( 
+ID_ varchar(64), 
+REV_ integer, 
+GROUP_ID_ varchar(255), 
+TYPE_ varchar(255), 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64) null, 
+PROC_DEF_ID_ varchar(64), 
+primary key (ID_) 
+)
+05:15:03,636 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_VARIABLE ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+TYPE_ varchar(255) not null, 
+NAME_ varchar(255) not null, 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+primary key (ID_) 
+)
+05:15:03,637 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_RU_EVENT_SUBSCR ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+EVENT_TYPE_ varchar(255) not null, 
+EVENT_NAME_ varchar(255), 
+EXECUTION_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+ACTIVITY_ID_ varchar(64), 
+CONFIGURATION_ varchar(255), 
+CREATED_ timestamp not null, 
+PROC_DEF_ID_ varchar(64), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,637 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_EVT_LOG ( 
+LOG_NR_ identity, 
+TYPE_ varchar(64), 
+PROC_DEF_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+TIME_STAMP_ timestamp not null, 
+USER_ID_ varchar(255), 
+DATA_ longvarbinary, 
+LOCK_OWNER_ varchar(255), 
+LOCK_TIME_ timestamp, 
+IS_PROCESSED_ bit default 0 
+)
+05:15:03,643 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_PROCDEF_INFO ( 
+ID_ varchar(64) not null, 
+PROC_DEF_ID_ varchar(64) not null, 
+REV_ integer, 
+INFO_JSON_ID_ varchar(64), 
+primary key (ID_) 
+)
+05:15:03,644 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_EXEC_BUSKEY on ACT_RU_EXECUTION(BUSINESS_KEY_)
+05:15:03,644 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_TASK_CREATE on ACT_RU_TASK(CREATE_TIME_)
+05:15:03,644 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_IDENT_LNK_USER on ACT_RU_IDENTITYLINK(USER_ID_)
+05:15:03,645 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_IDENT_LNK_GROUP on ACT_RU_IDENTITYLINK(GROUP_ID_)
+05:15:03,645 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_EVENT_SUBSCR_CONFIG_ on ACT_RU_EVENT_SUBSCR(CONFIGURATION_)
+05:15:03,645 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_VARIABLE_TASK_ID on ACT_RU_VARIABLE(TASK_ID_)
+05:15:03,645 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_ATHRZ_PROCEDEF on ACT_RU_IDENTITYLINK(PROC_DEF_ID_)
+05:15:03,646 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_INFO_PROCDEF on ACT_PROCDEF_INFO(PROC_DEF_ID_)
+05:15:03,646 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_GE_BYTEARRAY 
+add constraint ACT_FK_BYTEARR_DEPL 
+foreign key (DEPLOYMENT_ID_) 
+references ACT_RE_DEPLOYMENT
+05:15:03,656 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RE_PROCDEF 
+add constraint ACT_UNIQ_PROCDEF 
+unique (KEY_,VERSION_, TENANT_ID_)
+05:15:03,657 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,659 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PARENT 
+foreign key (PARENT_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,660 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_SUPER 
+foreign key (SUPER_EXEC_) 
+references ACT_RU_EXECUTION
+05:15:03,662 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_EXECUTION 
+add constraint ACT_FK_EXE_PROCDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF (ID_)
+05:15:03,664 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_TSKASS_TASK 
+foreign key (TASK_ID_) 
+references ACT_RU_TASK
+05:15:03,666 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_ATHRZ_PROCEDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF
+05:15:03,667 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_IDENTITYLINK 
+add constraint ACT_FK_IDL_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION (ID_)
+05:15:03,668 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_EXE 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,670 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,671 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_TASK 
+add constraint ACT_FK_TASK_PROCDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF
+05:15:03,673 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_EXE 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,676 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_PROCINST 
+foreign key (PROC_INST_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,677 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_VARIABLE 
+add constraint ACT_FK_VAR_BYTEARRAY 
+foreign key (BYTEARRAY_ID_) 
+references ACT_GE_BYTEARRAY
+05:15:03,679 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_JOB 
+add constraint ACT_FK_JOB_EXCEPTION 
+foreign key (EXCEPTION_STACK_ID_) 
+references ACT_GE_BYTEARRAY
+05:15:03,680 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RU_EVENT_SUBSCR 
+add constraint ACT_FK_EVENT_EXEC 
+foreign key (EXECUTION_ID_) 
+references ACT_RU_EXECUTION
+05:15:03,681 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_SOURCE 
+foreign key (EDITOR_SOURCE_VALUE_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+05:15:03,682 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_SOURCE_EXTRA 
+foreign key (EDITOR_SOURCE_EXTRA_VALUE_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+05:15:03,683 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_RE_MODEL 
+add constraint ACT_FK_MODEL_DEPLOYMENT 
+foreign key (DEPLOYMENT_ID_) 
+references ACT_RE_DEPLOYMENT (ID_)
+05:15:03,684 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_PROCDEF_INFO 
+add constraint ACT_FK_INFO_JSON_BA 
+foreign key (INFO_JSON_ID_) 
+references ACT_GE_BYTEARRAY (ID_)
+05:15:03,689 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_PROCDEF_INFO 
+add constraint ACT_FK_INFO_PROCDEF 
+foreign key (PROC_DEF_ID_) 
+references ACT_RE_PROCDEF (ID_)
+05:15:03,690 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_PROCDEF_INFO 
+add constraint ACT_UNIQ_INFO_PROCDEF 
+unique (PROC_DEF_ID_)
+05:15:03,691 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - activiti db schema create for component engine successful
+05:15:03,691 [Test worker] INFO  org.activiti.engine.impl.db.DbSqlSession  - performing create on history with resource org/activiti/db/create/activiti.h2.create.history.sql
+05:15:03,691 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_PROCINST ( 
+ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64) not null, 
+BUSINESS_KEY_ varchar(255), 
+PROC_DEF_ID_ varchar(64) not null, 
+START_TIME_ timestamp not null, 
+END_TIME_ timestamp, 
+DURATION_ bigint, 
+START_USER_ID_ varchar(255), 
+START_ACT_ID_ varchar(255), 
+END_ACT_ID_ varchar(255), 
+SUPER_PROCESS_INSTANCE_ID_ varchar(64), 
+DELETE_REASON_ varchar(4000), 
+TENANT_ID_ varchar(255) default '', 
+NAME_ varchar(255), 
+primary key (ID_), 
+unique (PROC_INST_ID_) 
+)
+05:15:03,702 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_ACTINST ( 
+ID_ varchar(64) not null, 
+PROC_DEF_ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64) not null, 
+EXECUTION_ID_ varchar(64) not null, 
+ACT_ID_ varchar(255) not null, 
+TASK_ID_ varchar(64), 
+CALL_PROC_INST_ID_ varchar(64), 
+ACT_NAME_ varchar(255), 
+ACT_TYPE_ varchar(255) not null, 
+ASSIGNEE_ varchar(255), 
+START_TIME_ timestamp not null, 
+END_TIME_ timestamp, 
+DURATION_ bigint, 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,708 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_TASKINST ( 
+ID_ varchar(64) not null, 
+PROC_DEF_ID_ varchar(64), 
+TASK_DEF_KEY_ varchar(255), 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+NAME_ varchar(255), 
+PARENT_TASK_ID_ varchar(64), 
+DESCRIPTION_ varchar(4000), 
+OWNER_ varchar(255), 
+ASSIGNEE_ varchar(255), 
+START_TIME_ timestamp not null, 
+CLAIM_TIME_ timestamp, 
+END_TIME_ timestamp, 
+DURATION_ bigint, 
+DELETE_REASON_ varchar(4000), 
+PRIORITY_ integer, 
+DUE_DATE_ timestamp, 
+FORM_KEY_ varchar(255), 
+CATEGORY_ varchar(255), 
+TENANT_ID_ varchar(255) default '', 
+primary key (ID_) 
+)
+05:15:03,712 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_VARINST ( 
+ID_ varchar(64) not null, 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+NAME_ varchar(255) not null, 
+VAR_TYPE_ varchar(100), 
+REV_ integer, 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+CREATE_TIME_ timestamp, 
+LAST_UPDATED_TIME_ timestamp, 
+primary key (ID_) 
+)
+05:15:03,713 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_DETAIL ( 
+ID_ varchar(64) not null, 
+TYPE_ varchar(255) not null, 
+TIME_ timestamp not null, 
+NAME_ varchar(255), 
+PROC_INST_ID_ varchar(64), 
+EXECUTION_ID_ varchar(64), 
+TASK_ID_ varchar(64), 
+ACT_INST_ID_ varchar(64), 
+VAR_TYPE_ varchar(255), 
+REV_ integer, 
+BYTEARRAY_ID_ varchar(64), 
+DOUBLE_ double, 
+LONG_ bigint, 
+TEXT_ varchar(4000), 
+TEXT2_ varchar(4000), 
+primary key (ID_) 
+)
+05:15:03,715 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_COMMENT ( 
+ID_ varchar(64) not null, 
+TYPE_ varchar(255), 
+TIME_ timestamp not null, 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+ACTION_ varchar(255), 
+MESSAGE_ varchar(4000), 
+FULL_MSG_ longvarbinary, 
+primary key (ID_) 
+)
+05:15:03,719 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_ATTACHMENT ( 
+ID_ varchar(64) not null, 
+REV_ integer, 
+USER_ID_ varchar(255), 
+NAME_ varchar(255), 
+DESCRIPTION_ varchar(4000), 
+TYPE_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64), 
+URL_ varchar(4000), 
+CONTENT_ID_ varchar(64), 
+TIME_ timestamp, 
+primary key (ID_) 
+)
+05:15:03,721 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_HI_IDENTITYLINK ( 
+ID_ varchar(64), 
+GROUP_ID_ varchar(255), 
+TYPE_ varchar(255), 
+USER_ID_ varchar(255), 
+TASK_ID_ varchar(64), 
+PROC_INST_ID_ varchar(64) null, 
+primary key (ID_) 
+)
+05:15:03,722 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_PRO_INST_END on ACT_HI_PROCINST(END_TIME_)
+05:15:03,722 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_PRO_I_BUSKEY on ACT_HI_PROCINST(BUSINESS_KEY_)
+05:15:03,722 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_ACT_INST_START on ACT_HI_ACTINST(START_TIME_)
+05:15:03,722 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_ACT_INST_END on ACT_HI_ACTINST(END_TIME_)
+05:15:03,722 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_DETAIL_PROC_INST on ACT_HI_DETAIL(PROC_INST_ID_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_DETAIL_ACT_INST on ACT_HI_DETAIL(ACT_INST_ID_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_DETAIL_TIME on ACT_HI_DETAIL(TIME_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_DETAIL_NAME on ACT_HI_DETAIL(NAME_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_DETAIL_TASK_ID on ACT_HI_DETAIL(TASK_ID_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_PROCVAR_PROC_INST on ACT_HI_VARINST(PROC_INST_ID_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_PROCVAR_NAME_TYPE on ACT_HI_VARINST(NAME_, VAR_TYPE_)
+05:15:03,723 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_PROCVAR_TASK_ID on ACT_HI_VARINST(TASK_ID_)
+05:15:03,724 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_ACT_INST_PROCINST on ACT_HI_ACTINST(PROC_INST_ID_, ACT_ID_)
+05:15:03,724 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_IDENT_LNK_USER on ACT_HI_IDENTITYLINK(USER_ID_)
+05:15:03,724 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_IDENT_LNK_TASK on ACT_HI_IDENTITYLINK(TASK_ID_)
+05:15:03,725 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_IDENT_LNK_PROCINST on ACT_HI_IDENTITYLINK(PROC_INST_ID_)
+05:15:03,725 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_ACT_INST_EXEC on ACT_HI_ACTINST(EXECUTION_ID_, ACT_ID_)
+05:15:03,725 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create index ACT_IDX_HI_TASK_INST_PROCINST on ACT_HI_TASKINST(PROC_INST_ID_)
+05:15:03,725 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - activiti db schema create for component history successful
+05:15:03,725 [Test worker] INFO  org.activiti.engine.impl.db.DbSqlSession  - performing create on identity with resource org/activiti/db/create/activiti.h2.create.identity.sql
+05:15:03,726 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_ID_GROUP ( 
+ID_ varchar(64), 
+REV_ integer, 
+NAME_ varchar(255), 
+TYPE_ varchar(255), 
+primary key (ID_) 
+)
+05:15:03,726 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_ID_MEMBERSHIP ( 
+USER_ID_ varchar(64), 
+GROUP_ID_ varchar(64), 
+primary key (USER_ID_, GROUP_ID_) 
+)
+05:15:03,726 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_ID_USER ( 
+ID_ varchar(64), 
+REV_ integer, 
+FIRST_ varchar(255), 
+LAST_ varchar(255), 
+EMAIL_ varchar(255), 
+PWD_ varchar(255), 
+PICTURE_ID_ varchar(64), 
+primary key (ID_) 
+)
+05:15:03,727 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: create table ACT_ID_INFO ( 
+ID_ varchar(64), 
+REV_ integer, 
+USER_ID_ varchar(64), 
+TYPE_ varchar(64), 
+KEY_ varchar(255), 
+VALUE_ varchar(255), 
+PASSWORD_ longvarbinary, 
+PARENT_ID_ varchar(255), 
+primary key (ID_) 
+)
+05:15:03,727 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_ID_MEMBERSHIP 
+add constraint ACT_FK_MEMB_GROUP 
+foreign key (GROUP_ID_) 
+references ACT_ID_GROUP
+05:15:03,728 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - SQL: alter table ACT_ID_MEMBERSHIP 
+add constraint ACT_FK_MEMB_USER 
+foreign key (USER_ID_) 
+references ACT_ID_USER
+05:15:03,729 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - activiti db schema create for component identity successful
+05:15:03,730 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 0 insert, 0 update, 0 delete.
+05:15:03,730 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+05:15:03,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+05:15:03,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+05:15:03,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+05:15:03,731 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,731 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,731 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:03,731 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- SchemaOperationsProcessEngineBuild finished --------------------------------------------------------
+05:15:03,731 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:03,732 [Test worker] INFO  org.activiti.engine.impl.ProcessEngineImpl  - ProcessEngine default created
+05:15:03,739 [Test worker] DEBUG org.activiti.engine.impl.test.TestHelper  - ==== PROCESS ENGINE CREATED =========================================================================
+05:15:03,742 [Test worker] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment creates deployment for FirstTest.test
+05:15:03,750 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:03,750 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeployCmd --------------------------------------------------------
+05:15:03,751 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:03,751 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting GetNextIdBlockCmd --------------------------------------------------------
+05:15:03,760 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+05:15:03,760 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 2056591529 from pool.
+05:15:03,760 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,764 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.selectProperty  - ==>  Preparing: select * from ACT_GE_PROPERTY where NAME_ = ? 
+05:15:03,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.selectProperty  - ==> Parameters: next.dbid(String)
+05:15:03,805 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.selectProperty  - <==      Total: 1
+05:15:03,808 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   update PropertyEntity[name=next.dbid, value=2501]
+05:15:03,808 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 0 insert, 1 update, 0 delete.
+05:15:03,808 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+05:15:03,808 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - updating: PropertyEntity[name=next.dbid, value=2501]
+05:15:03,808 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.updateProperty  - ==>  Preparing: update ACT_GE_PROPERTY SET REV_ = ?, VALUE_ = ? where NAME_ = ? and REV_ = ? 
+05:15:03,809 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.updateProperty  - ==> Parameters: 2(Integer), 2501(String), next.dbid(String), 1(Integer)
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.PropertyEntity.updateProperty  - <==    Updates: 1
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+05:15:03,811 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+05:15:03,811 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,811 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:03,811 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- GetNextIdBlockCmd finished --------------------------------------------------------
+05:15:03,811 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:03,812 [Test worker] DEBUG org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing deployment FirstTest.test
+05:15:03,812 [Test worker] INFO  org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing resource EIQF/bpmn-models/Confirm Borrower Authorization-44062.bpmn20.xml
+05:15:04,076 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.ProcessParseHandler  - Parsing process ConfirmBorrowerAuthorization
+05:15:04,076 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-469F9041-AC82-4D0B-A6D9-B3FB3F409C90
+05:15:04,077 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity ReviewConsent
+05:15:04,081 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity ReviewUpdatedConsent
+05:15:04,081 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity createReVerificationList
+05:15:04,081 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity verifysingle
+05:15:04,082 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-0542B618-30CE-4687-8CBC-29D4E76FDC17
+05:15:04,082 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-626A16CE-E06C-492E-B71F-44B1F48226C1
+05:15:04,083 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355
+05:15:04,083 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151
+05:15:04,083 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-ErrorVerificationResult
+05:15:04,083 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-SubmitVerificationResult
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-893B76B0-999E-49F9-88E5-D157EC0A6137
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-ErrorVerificationResultResolve
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-startEvent1
+05:15:04,085 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89
+05:15:04,086 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9
+05:15:04,087 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-ErrorVerificationResult
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-SubmitVerificationResult
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-893B76B0-999E-49F9-88E5-D157EC0A6137
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-ErrorVerificationResultResolve
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-startEvent1
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89
+05:15:04,090 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-99C34FB1-2753-4076-A26B-09105E9EB74A-sid-EA173A9D-5E9E-4AC1-BF91-CA9F35D1E355-sid-42058F17-D3EB-4E2D-9427-512ADDF6D52B
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-9CD0E612-1C19-417D-9E94-CB63224D0652
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-F15382AC-8F08-4A32-9A9D-4D96901F18AD
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-retreiveRequestData
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-893B76B0-999E-49F9-88E5-D157EC0A6137
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-BDD5A696-4F8B-4CDA-A708-820F2BAF13E9
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB
+05:15:04,091 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-getHostname
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-startEvent1
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-noResponse
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity retrieveUpdatedProductRequest-sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity createVerificationList
+05:15:04,092 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity startEvent1
+05:15:04,093 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-BC7C7871-F807-47ED-8C2E-54DEF077A37F
+05:15:04,093 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-3FAC3010-CAD0-42A0-A060-0282062498A4
+05:15:04,093 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-B676DAD0-B622-4400-B818-80FC95B54125
+05:15:04,093 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-90A24672-C929-42F2-8A4A-9ABA09BF4AD2
+05:15:06,090 [Test worker] INFO  org.activiti.engine.impl.bpmn.deployer.BpmnDeployer  - Processing resource EIQF/bpmn-models/Update ExecutionId for the applicant-44060.bpmn20.xml
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.ProcessParseHandler  - Parsing process SaveExecutionIdForTheApplicant
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-B0EA86DD-0B7F-4179-AFAD-0CC200AFF151
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-F15382AC-8F08-4A32-9A9D-4D96901F18AD
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity updateApplicantExecutionId
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-893B76B0-999E-49F9-88E5-D157EC0A6137
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-BDD5A696-4F8B-4CDA-A708-820F2BAF13E9
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-E47487B2-A1A2-488B-82D5-9C9A95A1B8AB
+05:15:06,112 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0
+05:15:06,113 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity startEvent1
+05:15:06,113 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-D44D3BDC-E34B-44F1-8619-DC4DA3563D89
+05:15:06,113 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity noResponse
+05:15:06,113 [Test worker] DEBUG org.activiti.engine.impl.bpmn.parser.handler.AbstractBpmnParseHandler  - Parsing activity sid-2421A5AB-6624-4CDB-BFAF-6B1DB5C3D8E9
+05:15:06,189 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+05:15:06,189 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 2056591529 from pool.
+05:15:06,189 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,190 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,190 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: ConfirmBorrowerAuthorization(String), ConfirmBorrowerAuthorization(String)
+05:15:06,192 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 0
+05:15:06,194 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==>  Preparing: select J.* from ACT_RU_JOB J inner join ACT_RE_PROCDEF P on J.PROC_DEF_ID_ = P.ID_ where J.HANDLER_TYPE_ = ? and P.KEY_ = ? and (P.TENANT_ID_ = '' or P.TENANT_ID_ is null) 
+05:15:06,196 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==> Parameters: timer-start-event(String), ConfirmBorrowerAuthorization(String)
+05:15:06,196 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - <==      Total: 0
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting GetProcessDefinitionInfoCmd --------------------------------------------------------
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'org.activiti.engine.impl.cmd.GetProcessDefinitionInfoCmd'
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- GetProcessDefinitionInfoCmd finished --------------------------------------------------------
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,197 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,198 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: SaveExecutionIdForTheApplicant(String), SaveExecutionIdForTheApplicant(String)
+05:15:06,198 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 0
+05:15:06,198 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==>  Preparing: select J.* from ACT_RU_JOB J inner join ACT_RE_PROCDEF P on J.PROC_DEF_ID_ = P.ID_ where J.HANDLER_TYPE_ = ? and P.KEY_ = ? and (P.TENANT_ID_ = '' or P.TENANT_ID_ is null) 
+05:15:06,198 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - ==> Parameters: timer-start-event(String), SaveExecutionIdForTheApplicant(String)
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionKeyNoTenantId  - <==      Total: 0
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting GetProcessDefinitionInfoCmd --------------------------------------------------------
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'org.activiti.engine.impl.cmd.GetProcessDefinitionInfoCmd'
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- GetProcessDefinitionInfoCmd finished --------------------------------------------------------
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert DeploymentEntity[id=1, name=FirstTest.test]
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ProcessDefinitionEntity[ConfirmBorrowerAuthorization:1:6]
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ProcessDefinitionEntity[SaveExecutionIdForTheApplicant:1:7]
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=2, name=EIQF/bpmn-models/Confirm Borrower Authorization-44062.bpmn20.xml]
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=3, name=EIQF/bpmn-models/Update ExecutionId for the applicant-44060.bpmn20.xml]
+05:15:06,199 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=4, name=EIQF/bpmn-models/Confirm Borrower Authorization-44062.ConfirmBorrowerAuthorization.png]
+05:15:06,200 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   insert ResourceEntity[id=5, name=EIQF/bpmn-models/Update ExecutionId for the applicant-44060.SaveExecutionIdForTheApplicant.png]
+05:15:06,200 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 7 insert, 0 update, 0 delete.
+05:15:06,200 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+05:15:06,225 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.bulkInsertProcessDefinition  - ==>  Preparing: INSERT INTO ACT_RE_PROCDEF(ID_, REV_, CATEGORY_, NAME_, KEY_, VERSION_, DEPLOYMENT_ID_, RESOURCE_NAME_, DGRM_RESOURCE_NAME_, DESCRIPTION_, HAS_START_FORM_KEY_, HAS_GRAPHICAL_NOTATION_ , SUSPENSION_STATE_, TENANT_ID_) VALUES (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) 
+05:15:06,227 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.bulkInsertProcessDefinition  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String), http://www.activiti.org/processdef(String), Confirm Borrower Authorization(String), ConfirmBorrowerAuthorization(String), 1(Integer), 1(String), EIQF/bpmn-models/Confirm Borrower Authorization-44062.bpmn20.xml(String), EIQF/bpmn-models/Confirm Borrower Authorization-44062.ConfirmBorrowerAuthorization.png(String), null, false(Boolean), true(Boolean), 1(Integer), (String), SaveExecutionIdForTheApplicant:1:7(String), http://www.activiti.org/processdef(String), Update ExecutionId for the applicant(String), SaveExecutionIdForTheApplicant(String), 1(Integer), 1(String), EIQF/bpmn-models/Update ExecutionId for the applicant-44060.bpmn20.xml(String), EIQF/bpmn-models/Update ExecutionId for the applicant-44060.SaveExecutionIdForTheApplicant.png(String), null, false(Boolean), true(Boolean), 1(Integer), (String)
+05:15:06,227 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.bulkInsertProcessDefinition  - <==    Updates: 2
+05:15:06,227 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - inserting: DeploymentEntity[id=1, name=FirstTest.test]
+05:15:06,227 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==>  Preparing: insert into ACT_RE_DEPLOYMENT(ID_, NAME_, CATEGORY_, TENANT_ID_, DEPLOY_TIME_) values(?, ?, ?, ?, ?) 
+05:15:06,230 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - ==> Parameters: 1(String), FirstTest.test(String), null, (String), 2019-07-30 17:15:03.75(Timestamp)
+05:15:06,230 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.insertDeployment  - <==    Updates: 1
+05:15:06,232 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.bulkInsertResource  - ==>  Preparing: INSERT INTO ACT_GE_BYTEARRAY(ID_, REV_, NAME_, BYTES_, DEPLOYMENT_ID_, GENERATED_) VALUES (?, 1, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?) , (?, 1, ?, ?, ?, ?) 
+05:15:06,242 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.bulkInsertResource  - ==> Parameters: 2(String), EIQF/bpmn-models/Confirm Borrower Authorization-44062.bpmn20.xml(String), java.io.ByteArrayInputStream@4d609946(ByteArrayInputStream), 1(String), false(Boolean), 3(String), EIQF/bpmn-models/Update ExecutionId for the applicant-44060.bpmn20.xml(String), java.io.ByteArrayInputStream@2c58d6ba(ByteArrayInputStream), 1(String), false(Boolean), 4(String), EIQF/bpmn-models/Confirm Borrower Authorization-44062.ConfirmBorrowerAuthorization.png(String), java.io.ByteArrayInputStream@6f18af99(ByteArrayInputStream), 1(String), true(Boolean), 5(String), EIQF/bpmn-models/Update ExecutionId for the applicant-44060.SaveExecutionIdForTheApplicant.png(String), java.io.ByteArrayInputStream@577a029b(ByteArrayInputStream), 1(String), true(Boolean)
+05:15:06,244 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.bulkInsertResource  - <==    Updates: 4
+05:15:06,244 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+05:15:06,244 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+05:15:06,244 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,244 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+05:15:06,244 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,245 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,245 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:06,245 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeployCmd finished --------------------------------------------------------
+05:15:06,245 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,246 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,246 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting StartProcessInstanceCmd --------------------------------------------------------
+05:15:06,246 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+05:15:06,246 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 2056591529 from pool.
+05:15:06,246 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,246 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,246 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: ConfirmBorrowerAuthorization(String), ConfirmBorrowerAuthorization(String)
+05:15:06,247 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+05:15:06,248 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - ==>  Preparing: select * from ACT_RE_PROCDEF where ID_ = ? 
+05:15:06,248 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,249 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - <==      Total: 1
+05:15:06,249 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - initializing ProcessInstance[8]
+05:15:06,251 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,252 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,252 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,252 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,252 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,253 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,262 [Test worker] DEBUG com.corelogic.UpdateApplicantWithExecutionId  - AUTHENTICATED USER: 1
+Execution Values.....
+Exec ID from within class: 8
+ApplicantRefId: 1
+05:15:06,282 [Test worker] ERROR com.corelogic.UpdateApplicantWithExecutionId  - Appliucant Update: {executionId=8, applicantRefId=1, requestid=1}
+05:15:06,282 [Test worker] DEBUG com.corelogic.UpdateApplicantWithExecutionId  - TENANT ID: 
+05:15:06,282 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,282 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting StartProcessInstanceCmd --------------------------------------------------------
+05:15:06,282 [Test worker] DEBUG org.activiti.engine.impl.interceptor.CommandContextInterceptor  - Valid context found. Reusing it for the current command 'org.activiti.engine.impl.cmd.StartProcessInstanceCmd'
+05:15:06,282 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,283 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: SaveExecutionIdForTheApplicant(String), SaveExecutionIdForTheApplicant(String)
+05:15:06,283 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+05:15:06,283 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - ==>  Preparing: select * from ACT_RE_PROCDEF where ID_ = ? 
+05:15:06,283 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,284 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionById  - <==      Total: 1
+05:15:06,284 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity  - initializing ProcessInstance[19]
+05:15:06,284 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - ==>  Preparing: select * from ACT_RU_IDENTITYLINK where PROC_INST_ID_ = ? 
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - ==> Parameters: 19(String)
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.selectIdentityLinksByProcessInstance  - <==      Total: 0
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: AUDIT
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,285 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,286 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,286 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,286 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[19] executes Activity(startEvent1): org.activiti.engine.impl.bpmn.behavior.NoneStartEventActivityBehavior
+05:15:06,287 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==>  Preparing: select * from ACT_RU_JOB J where J.EXECUTION_ID_ = ? 
+05:15:06,287 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==> Parameters: 19(String)
+05:15:06,288 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - <==      Total: 0
+05:15:06,288 [Test worker] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'startEvent1'
+05:15:06,288 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,289 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[19] takes transition (startEvent1)--sid-8DD35970-9779-4113-BEB3-9EE0659B5A8A-->(sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0)
+05:15:06,289 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,289 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[19] executes Activity(sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0): org.activiti.engine.impl.bpmn.behavior.ScriptTaskActivityBehavior
+05:15:06,666 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,666 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,668 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,668 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,668 [Test worker] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0'
+05:15:06,668 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,668 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[19] takes transition (sid-47411F58-83E3-4EF0-BE3F-37C14422A3A0)--sid-87E479C4-52A7-406A-8C43-03E52A2F9FB7-->(updateApplicantExecutionId)
+05:15:06,669 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- StartProcessInstanceCmd finished --------------------------------------------------------
+05:15:06,669 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,669 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[8] executes Activity(startEvent1): org.activiti.engine.impl.bpmn.behavior.NoneStartEventActivityBehavior
+05:15:06,669 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==>  Preparing: select * from ACT_RU_JOB J where J.EXECUTION_ID_ = ? 
+05:15:06,670 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - ==> Parameters: 8(String)
+05:15:06,670 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobsByExecutionId  - <==      Total: 0
+05:15:06,670 [Test worker] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'startEvent1'
+05:15:06,671 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,671 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[8] takes transition (startEvent1)--sid-D8793E49-B6CC-44F6-B628-F308FF45ACAE-->(sid-626A16CE-E06C-492E-B71F-44B1F48226C1)
+05:15:06,671 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,671 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[8] executes Activity(sid-626A16CE-E06C-492E-B71F-44B1F48226C1): org.activiti.engine.impl.bpmn.behavior.ScriptTaskActivityBehavior
+APPLICANT.....
+{
+    "applicantRefId": "1",
+    "firstName": "David",
+    "lastName": "Kowis",
+    "ssn": "123456789",
+    "ssnLastFour": "6789",
+    "loanNumber": "million-dollar-loan"
+}
+05:15:06,702 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,702 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,704 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,704 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,705 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: FULL
+05:15:06,705 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+the-weather-channel
+05:15:06,707 [Test worker] DEBUG org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior  - Leaving activity 'sid-626A16CE-E06C-492E-B71F-44B1F48226C1'
+05:15:06,707 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,708 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[8] takes transition (sid-626A16CE-E06C-492E-B71F-44B1F48226C1)--sid-E96B144B-75E3-49ED-876E-F65DFDE78259-->(sid-9CD0E612-1C19-417D-9E94-CB63224D0652)
+05:15:06,708 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,708 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[8] executes Activity(sid-9CD0E612-1C19-417D-9E94-CB63224D0652): org.activiti.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior
+05:15:06,708 [Test worker] DEBUG org.activiti.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior  - Leaving activity 'sid-9CD0E612-1C19-417D-9E94-CB63224D0652'
+05:15:06,712 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'activiti_flowConditionsBean'
+05:15:06,712 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'activiti_flowConditionsBean'
+05:15:06,713 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Eagerly caching bean 'activiti_flowConditionsBean' to allow for resolving potential circular references
+05:15:06,713 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Finished creating instance of bean 'activiti_flowConditionsBean'
+05:15:06,715 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,715 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake  - ProcessInstance[8] takes transition (sid-9CD0E612-1C19-417D-9E94-CB63224D0652)--sid-1E43C26F-3380-477F-BA76-B4DEE893514B-->(ReviewConsent)
+05:15:06,716 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: ACTIVITY
+05:15:06,716 [Test worker] DEBUG org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute  - ProcessInstance[8] executes Activity(ReviewConsent): org.activiti.engine.impl.bpmn.behavior.UserTaskActivityBehavior
+05:15:06,716 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - ==>  Preparing: select distinct T.* from ACT_RU_TASK T where T.EXECUTION_ID_ = ? 
+05:15:06,717 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - ==> Parameters: 8(String)
+05:15:06,717 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.TaskEntity.selectTasksByExecutionId  - <==      Total: 0
+05:15:06,717 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: AUDIT
+05:15:06,718 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: AUDIT
+05:15:06,718 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: AUDIT
+05:15:06,718 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT, level required: AUDIT
+05:15:06,718 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating shared instance of singleton bean 'taskDueDateBean'
+05:15:06,718 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Creating instance of bean 'taskDueDateBean'
+05:15:06,719 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Eagerly caching bean 'taskDueDateBean' to allow for resolving potential circular references
+05:15:06,719 [Test worker] DEBUG org.springframework.beans.factory.support.DefaultListableBeanFactory  - Finished creating instance of bean 'taskDueDateBean'
+05:15:06,723 [Test worker] DEBUG org.activiti.engine.impl.interceptor.CommandContext  - Error while closing command context
+org.activiti.engine.ActivitiException: Error while evaluating expression: ${taskDueDateBean.calculateDueDate(0,0,0,4,0,0)}
+	at org.activiti.engine.impl.el.JuelExpression.getValue(JuelExpression.java:57)
+	at org.activiti.engine.impl.bpmn.behavior.UserTaskActivityBehavior.execute(UserTaskActivityBehavior.java:145)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.ExclusiveGatewayActivityBehavior.leave(ExclusiveGatewayActivityBehavior.java:89)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.AbstractBpmnActivityBehavior.leave(AbstractBpmnActivityBehavior.java:47)
+	at org.activiti.engine.impl.bpmn.behavior.ScriptTaskActivityBehavior.execute(ScriptTaskActivityBehavior.java:97)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerStart.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerStart.java:52)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionCreateScope.execute(AtomicOperationTransitionCreateScope.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerTake.execute(AtomicOperationTransitionNotifyListenerTake.java:80)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionDestroyScope.execute(AtomicOperationTransitionDestroyScope.java:116)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationTransitionNotifyListenerEnd.eventNotificationsCompleted(AtomicOperationTransitionNotifyListenerEnd.java:35)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:454)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.take(ExecutionEntity.java:432)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performOutgoingBehavior(BpmnActivityBehavior.java:140)
+	at org.activiti.engine.impl.bpmn.behavior.BpmnActivityBehavior.performDefaultOutgoingBehavior(BpmnActivityBehavior.java:66)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.leave(FlowNodeActivityBehavior.java:44)
+	at org.activiti.engine.impl.bpmn.behavior.FlowNodeActivityBehavior.execute(FlowNodeActivityBehavior.java:36)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationActivityExecute.execute(AtomicOperationActivityExecute.java:60)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStartInitial.eventNotificationsCompleted(AtomicOperationProcessStartInitial.java:45)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AtomicOperationProcessStart.eventNotificationsCompleted(AtomicOperationProcessStart.java:64)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:56)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:49)
+	at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:97)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:644)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:637)
+	at org.activiti.engine.impl.persistence.entity.ExecutionEntity.start(ExecutionEntity.java:382)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:110)
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37)
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:24)
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:57)
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:37)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:40)
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:35)
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:82)
+	at com.corelogic.spike.FirstTest.test(FirstTest.kt:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.activiti.engine.test.ActivitiRule$1.evaluate(ActivitiRule.java:126)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.activiti.engine.impl.javax.el.ELException: java.lang.NullPointerException
+	at org.activiti.engine.impl.javax.el.BeanELResolver.invoke(BeanELResolver.java:487)
+	at org.activiti.engine.impl.javax.el.CompositeELResolver.invoke(CompositeELResolver.java:397)
+	at org.activiti.engine.impl.juel.AstMethod.invoke(AstMethod.java:102)
+	at org.activiti.engine.impl.juel.AstMethod.eval(AstMethod.java:86)
+	at org.activiti.engine.impl.juel.AstEval.eval(AstEval.java:50)
+	at org.activiti.engine.impl.juel.AstNode.getValue(AstNode.java:26)
+	at org.activiti.engine.impl.juel.TreeValueExpression.getValue(TreeValueExpression.java:114)
+	at org.activiti.engine.impl.delegate.ExpressionGetInvocation.invoke(ExpressionGetInvocation.java:33)
+	at org.activiti.engine.impl.delegate.DelegateInvocation.proceed(DelegateInvocation.java:37)
+	at org.activiti.engine.impl.delegate.DefaultDelegateInterceptor.handleInvocation(DefaultDelegateInterceptor.java:25)
+	at org.activiti.engine.impl.el.JuelExpression.getValue(JuelExpression.java:50)
+	... 197 more
+Caused by: java.lang.NullPointerException
+	at com.activiti.runtime.activiti.bean.UserTaskDueDateBean.calculateDueDate(UserTaskDueDateBean.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.activiti.engine.impl.javax.el.BeanELResolver.invoke(BeanELResolver.java:483)
+	... 207 more
+05:15:06,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolling back...
+05:15:06,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - rolling back ibatis sql session...
+05:15:06,730 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event rolled back...
+05:15:06,730 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,731 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,731 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:06,731 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- StartProcessInstanceCmd finished --------------------------------------------------------
+05:15:06,731 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,731 [Test worker] DEBUG org.activiti.engine.impl.test.TestHelper  - annotation @Deployment deletes deployment for FirstTest.test
+05:15:06,731 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+05:15:06,732 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- starting DeleteDeploymentCmd --------------------------------------------------------
+05:15:06,733 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Opening JDBC Connection
+05:15:06,733 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Checked out connection 2056591529 from pool.
+05:15:06,733 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Setting autocommit to false on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,733 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==>  Preparing: select * from ACT_RE_DEPLOYMENT where ID_ = ? 
+05:15:06,733 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - ==> Parameters: 1(String)
+05:15:06,734 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.selectDeploymentById  - <==      Total: 1
+05:15:06,753 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==>  Preparing: select RES.* from ACT_RE_PROCDEF RES WHERE RES.DEPLOYMENT_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ? 
+05:15:06,753 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==> Parameters: 1(String), 2147483647(Integer), 0(Integer)
+05:15:06,755 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - <==      Total: 2
+05:15:06,758 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ModelEntity.selectModelsByQueryCriteria  - ==>  Preparing: select distinct RES.* from ACT_RE_MODEL RES WHERE RES.DEPLOYMENT_ID_ = ? order by RES.ID_ asc LIMIT ? OFFSET ? 
+05:15:06,759 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ModelEntity.selectModelsByQueryCriteria  - ==> Parameters: 1(String), 2147483647(Integer), 0(Integer)
+05:15:06,760 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ModelEntity.selectModelsByQueryCriteria  - <==      Total: 0
+05:15:06,760 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - ==>  Preparing: select ID_ from ACT_RU_EXECUTION where PROC_DEF_ID_ = ? and PARENT_ID_ is null 
+05:15:06,761 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,761 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - <==      Total: 0
+05:15:06,761 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT
+05:15:06,761 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - ==>  Preparing: select ID_ from ACT_HI_PROCINST where PROC_DEF_ID_ = ? 
+05:15:06,762 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,762 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - <==      Total: 0
+05:15:06,762 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - ==>  Preparing: select ID_ from ACT_RU_EXECUTION where PROC_DEF_ID_ = ? and PARENT_ID_ is null 
+05:15:06,762 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,762 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ExecutionEntity.selectProcessInstanceIdsByProcessDefinitionId  - <==      Total: 0
+05:15:06,763 [Test worker] DEBUG org.activiti.engine.impl.history.DefaultHistoryManager  - Current history level: AUDIT
+05:15:06,763 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - ==>  Preparing: select ID_ from ACT_HI_PROCINST where PROC_DEF_ID_ = ? 
+05:15:06,763 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,763 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.HistoricProcessInstanceEntity.selectHistoricProcessInstanceIdsByProcessDefinitionId  - <==      Total: 0
+05:15:06,770 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - ==>  Preparing: select * from ACT_RU_EVENT_SUBSCR WHERE PROC_DEF_ID_ = ? and EXECUTION_ID_ is null and PROC_INST_ID_ is null and (TENANT_ID_ = '' or TENANT_ID_ is null) 
+05:15:06,771 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,771 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - <==      Total: 0
+05:15:06,771 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==>  Preparing: select * from ACT_PROCDEF_INFO where PROC_DEF_ID_ = ? 
+05:15:06,772 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,772 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - <==      Total: 0
+05:15:06,772 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - ==>  Preparing: select * from ACT_RU_EVENT_SUBSCR WHERE PROC_DEF_ID_ = ? and EXECUTION_ID_ is null and PROC_INST_ID_ is null and (TENANT_ID_ = '' or TENANT_ID_ is null) 
+05:15:06,772 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,773 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.EventSubscriptionEntity.selectEventSubscriptionsByTypeAndProcessDefinitionId  - <==      Total: 0
+05:15:06,773 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==>  Preparing: select * from ACT_PROCDEF_INFO where PROC_DEF_ID_ = ? 
+05:15:06,773 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,773 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionInfoEntity.selectProcessDefinitionInfoByProcessDefinitionId  - <==      Total: 0
+05:15:06,773 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - ==>  Preparing: select J.* from ACT_RU_JOB J where J.HANDLER_TYPE_ = ? and J.PROC_DEF_ID_ = ? 
+05:15:06,774 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - ==> Parameters: timer-start-event(String), ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,774 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - <==      Total: 0
+05:15:06,774 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,775 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: ConfirmBorrowerAuthorization(String), ConfirmBorrowerAuthorization(String)
+05:15:06,776 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+05:15:06,777 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==>  Preparing: select RES.* from ACT_RE_PROCDEF RES WHERE RES.KEY_ = ? and RES.VERSION_ < ? and (RES.TENANT_ID_ = '' or RES.TENANT_ID_ is null) order by RES.VERSION_ desc LIMIT ? OFFSET ? 
+05:15:06,778 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==> Parameters: ConfirmBorrowerAuthorization(String), 1(Integer), 1(Integer), 0(Integer)
+05:15:06,778 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - <==      Total: 0
+05:15:06,779 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - ==>  Preparing: select J.* from ACT_RU_JOB J where J.HANDLER_TYPE_ = ? and J.PROC_DEF_ID_ = ? 
+05:15:06,779 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - ==> Parameters: timer-start-event(String), SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,779 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.JobEntity.selectJobByTypeAndProcessDefinitionId  - <==      Total: 0
+05:15:06,779 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==>  Preparing: select * from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null) and VERSION_ = (select max(VERSION_) from ACT_RE_PROCDEF where KEY_ = ? and (TENANT_ID_ = '' or TENANT_ID_ is null)) 
+05:15:06,779 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - ==> Parameters: SaveExecutionIdForTheApplicant(String), SaveExecutionIdForTheApplicant(String)
+05:15:06,780 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectLatestProcessDefinitionByKey  - <==      Total: 1
+05:15:06,781 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==>  Preparing: select RES.* from ACT_RE_PROCDEF RES WHERE RES.KEY_ = ? and RES.VERSION_ < ? and (RES.TENANT_ID_ = '' or RES.TENANT_ID_ is null) order by RES.VERSION_ desc LIMIT ? OFFSET ? 
+05:15:06,781 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - ==> Parameters: SaveExecutionIdForTheApplicant(String), 1(Integer), 1(Integer), 0(Integer)
+05:15:06,781 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.selectProcessDefinitionsByQueryCriteria  - <==      Total: 0
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   bulk delete: deleteIdentityLinkByProcDef(ConfirmBorrowerAuthorization:1:6)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   bulk delete: deleteIdentityLinkByProcDef(SaveExecutionIdForTheApplicant:1:7)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   bulk delete: deleteProcessDefinitionsByDeploymentId(1)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   bulk delete: deleteResourcesByDeploymentId(1)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  -   bulk delete: deleteDeployment(1)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - flush summary: 0 insert, 0 update, 5 delete.
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - now executing flush...
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - executing: bulk delete: deleteIdentityLinkByProcDef(ConfirmBorrowerAuthorization:1:6)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - ==>  Preparing: delete from ACT_RU_IDENTITYLINK where PROC_DEF_ID_ = ? 
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - ==> Parameters: ConfirmBorrowerAuthorization:1:6(String)
+05:15:06,782 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - <==    Updates: 0
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - executing: bulk delete: deleteIdentityLinkByProcDef(SaveExecutionIdForTheApplicant:1:7)
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - ==>  Preparing: delete from ACT_RU_IDENTITYLINK where PROC_DEF_ID_ = ? 
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - ==> Parameters: SaveExecutionIdForTheApplicant:1:7(String)
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.IdentityLinkEntity.deleteIdentityLinkByProcDef  - <==    Updates: 0
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - executing: bulk delete: deleteProcessDefinitionsByDeploymentId(1)
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.deleteProcessDefinitionsByDeploymentId  - ==>  Preparing: delete from ACT_RE_PROCDEF where DEPLOYMENT_ID_ = ? 
+05:15:06,783 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.deleteProcessDefinitionsByDeploymentId  - ==> Parameters: 1(String)
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ProcessDefinitionEntity.deleteProcessDefinitionsByDeploymentId  - <==    Updates: 2
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - executing: bulk delete: deleteResourcesByDeploymentId(1)
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.deleteResourcesByDeploymentId  - ==>  Preparing: delete from ACT_GE_BYTEARRAY where DEPLOYMENT_ID_ = ? 
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.deleteResourcesByDeploymentId  - ==> Parameters: 1(String)
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.ResourceEntity.deleteResourcesByDeploymentId  - <==    Updates: 4
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.db.DbSqlSession  - executing: bulk delete: deleteDeployment(1)
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.deleteDeployment  - ==>  Preparing: delete from ACT_RE_DEPLOYMENT where ID_ = ? 
+05:15:06,785 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.deleteDeployment  - ==> Parameters: 1(String)
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.persistence.entity.DeploymentEntity.deleteDeployment  - <==    Updates: 1
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committing...
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - committing the ibatis sql session...
+05:15:06,786 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Committing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.cfg.standalone.StandaloneMybatisTransactionContext  - firing event committed...
+05:15:06,786 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Resetting autocommit to true on JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,786 [Test worker] DEBUG org.apache.ibatis.transaction.jdbc.JdbcTransaction  - Closing JDBC Connection [conn1: url=jdbc:h2:mem:activiti user=SA]
+05:15:06,786 [Test worker] DEBUG org.apache.ibatis.datasource.pooled.PooledDataSource  - Returned connection 2056591529 to pool.
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - --- DeleteDeploymentCmd finished --------------------------------------------------------
+05:15:06,786 [Test worker] DEBUG org.activiti.engine.impl.interceptor.LogInterceptor  - 
+
+]]></system-out>
+  <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/Labs/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-log4j12/1.7.5/6edffc576ce104ec769d954618764f39f0f0f10d/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/Labs/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.1.11/ccedfbacef4a6515d2983e3f89ed753d5d4fb665/logback-classic-1.1.11.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+]]></system-err>
+</testsuite>
